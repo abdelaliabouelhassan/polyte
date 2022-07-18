@@ -92,7 +92,7 @@
             <span class=" text-xl text-primary-black font-normal font-Inter text-opacity-25">Model Airplane</span>
           </div>
            <div class="flex items-center space-x-4">
-             <span class=" text-xl text-primary-black font-normal font-Inter text-opacity-25 uppercase">ON AIR</span>
+             <span class=" text-xl text-primary-black font-normal font-Inter text-opacity-25 uppercase">OFFLINE</span>
             <div
               class=" w-3 h-3 rounded-full overflow-hidden bg-primary-black bg-opacity-25"
             ></div>
