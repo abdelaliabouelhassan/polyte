@@ -1,12 +1,13 @@
 <template>
   <div
     class="
-     fixed
+      fixed
       w-full
       bg-white
       px-10
-      pb-4 pt-4
-      border-0 border-b-2  border-secondary-gray
+      pb-4
+      pt-4
+      border-0 border-b-2 border-secondary-gray
       card-shadow
       flex
       justify-between
@@ -28,10 +29,12 @@
           text-primary-black text-center text-xl
           py-2
           px-4
-          rounded-md hover:bg-gray-300 
+          rounded-md
+          hover:bg-gray-300
         "
         :class="{
-          'bg-primary-gray text-opacity-100  font-bold hover:bg-primary-gray ': item.active,
+          'bg-primary-gray text-opacity-100  font-bold hover:bg-primary-gray ':
+            item.active,
           'font-normal text-opacity-50 ': !item.active,
         }"
       >
@@ -58,43 +61,72 @@
 import { ref } from "@vue/reactivity";
 import Logo from "../Icons/Logo.vue";
 import ProfileIcon from "../Icons/ProfileIcon.vue";
+import { useRouter, useRoute } from "vue-router";
+import { onMounted } from "@vue/runtime-core";
 export default {
   components: {
     Logo,
     ProfileIcon,
   },
   setup() {
+    const router = useRouter();
+    const route = useRoute();
+
     const links = ref([
       {
         name: "Overview",
-        path: "/",
-        active: true,
+        pathname: "overview",
+        active: false,
       },
       {
         name: "Manage Content",
-        path: "/about",
+        pathname: "manage-content",
         active: false,
       },
       {
         name: "Manage Projects",
-        path: "/contact",
+        pathname: "manage-projects",
         active: false,
       },
       {
         name: "Settings",
-        path: "/contact",
+        pathname: "settings",
         active: false,
       },
     ]);
     const SetActive = (link) => {
+      link.active = true;
       links.value.forEach((item) => {
         item.active = false;
       });
-      link.active = true;
+      
+      GoTo(link.pathname);
     };
+    const GoTo = (pathname) => {
+      router.push({ name: pathname });
+    };
+    const SetLinkActive = () => {
+      links.value.forEach((item) => {
+        //check name
+        if (item.pathname === route.name) {
+          item.active = true;
+        } else {
+          item.active = false;
+        }
+        console.log("gg");
+      });
+    };
+    onMounted(() => {
+      setTimeout(() => {
+        SetLinkActive();
+      }, 10);
+    });
+
     return {
       links,
       SetActive,
+      GoTo,
+      SetLinkActive
     };
   },
 };
