@@ -9,7 +9,7 @@
           py-2
           px-4
           rounded-md
-          bg-primary-gray
+          bg-primary-gray hover:bg-gray-300 
         "
       >
         Manage

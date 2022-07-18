@@ -9,7 +9,7 @@
           py-2
           px-4
           rounded-md
-          bg-primary-gray
+          bg-primary-gray hover:bg-gray-300 
         "
       >
         All Projects
@@ -77,7 +77,7 @@
           rounded-t-md
         "
       >
-        <button class="flex w-full bg-primary-blue py-2 px-2 rounded-lg max-w-xs m-auto">
+        <button class="flex w-full bg-primary-blue hover:bg-opacity-90 py-2 px-2 rounded-lg max-w-xs m-auto">
           <div class="m-auto flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

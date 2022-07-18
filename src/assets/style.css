@@ -26,3 +26,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #001324; 
   }
+
+  * {
+    transition: all 0.3s ease-in-out;
+  }

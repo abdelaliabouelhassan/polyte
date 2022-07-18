@@ -28,10 +28,10 @@
           text-primary-black text-center text-xl
           py-2
           px-4
-          rounded-md
+          rounded-md hover:bg-gray-300 
         "
         :class="{
-          'bg-primary-gray text-opacity-100  font-bold': item.active,
+          'bg-primary-gray text-opacity-100  font-bold hover:bg-primary-gray ': item.active,
           'font-normal text-opacity-50 ': !item.active,
         }"
       >
