@@ -94,8 +94,7 @@
            <div class="flex items-center space-x-4">
              <span class=" text-xl text-primary-black font-normal font-Inter text-opacity-25 uppercase">ON AIR</span>
             <div
-              class=" w-3 h-3 rounded-full overflow-hidden"
-              style="background: #FF5064"
+              class=" w-3 h-3 rounded-full overflow-hidden bg-primary-black bg-opacity-25"
             ></div>
            
           </div>
