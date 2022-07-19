@@ -3,6 +3,7 @@
     <div class="flex justify-between items-center w-full">
       <span class="text-primary-black font-bold text-3xl">Latest Products</span>
       <button
+       @click="AllProducts"
         class="
           text-primary-black text-xl
           font-normal
@@ -104,7 +105,22 @@
   </div>
 </template>
 
+<script>
+import { useRouter } from "vue-router";
+ 
+export default {
+    setup(){
+      const router = useRouter();
+      const AllProducts = () => {
+        router.push({name:'manage-content'});
+      };
 
+      return {
+        AllProducts
+      }
+    }
+}
+</script>
 
 <style scoped>
 /* width */
