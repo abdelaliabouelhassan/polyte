@@ -113,7 +113,7 @@ export default {
         } else {
           item.active = false;
         }
-        console.log("gg");
+        
       });
     };
     onMounted(() => {
