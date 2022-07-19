@@ -260,9 +260,9 @@
 
 <script>
 import HomeLayout from "../layouts/HomeLayout.vue";
-import IconSearch from "../icons/IconSearch.vue";
-import FilterIcon from "../icons/FilterIcon.vue";
-import SelectIcon from "../icons/SelectIcon.vue";
+import IconSearch from "../Icons/IconSearch.vue";
+import FilterIcon from "../Icons/FilterIcon.vue";
+import SelectIcon from "../Icons/SelectIcon.vue";
 import { ref } from "@vue/reactivity";
 export default {
   components: {
