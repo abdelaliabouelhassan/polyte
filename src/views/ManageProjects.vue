@@ -1,7 +1,7 @@
 <template>
   <HomeLayout>
     <template v-slot:content>
-    <div class=" py-16">
+    <div class="pt-16 pb-10">
       <h1>Manage Poject page</h1>
     </div>
     </template>
