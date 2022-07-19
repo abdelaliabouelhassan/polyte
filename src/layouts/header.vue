@@ -77,29 +77,37 @@ export default {
         name: "Overview",
         pathname: "overview",
         active: false,
+        children: [],
       },
       {
         name: "Manage Content",
         pathname: "manage-content",
         active: false,
+        children: [],
       },
       {
         name: "Manage Projects",
-        pathname: "manage-projects",
+        pathname: "manage-projects-projects",
         active: false,
+        children: [
+          "manage-projects-projects",
+          "manage-projects-details",
+          "manage-projects-create",
+        ],
       },
       {
         name: "Settings",
         pathname: "settings",
         active: false,
+        children: [],
       },
     ]);
     const SetActive = (link) => {
-      link.active = true;
+      
       links.value.forEach((item) => {
         item.active = false;
       });
-      
+    link.active = true;
       GoTo(link.pathname);
     };
     const GoTo = (pathname) => {
@@ -107,13 +115,16 @@ export default {
     };
     const SetLinkActive = () => {
       links.value.forEach((item) => {
-        //check name
-        if (item.pathname === route.name) {
+        if (item.pathname == route.name) {
           item.active = true;
         } else {
           item.active = false;
+          item.children.forEach((child) => {
+            if (child == route.name) {
+              item.active = true;
+            }
+          });
         }
-        
       });
     };
     onMounted(() => {
@@ -126,7 +137,7 @@ export default {
       links,
       SetActive,
       GoTo,
-      SetLinkActive
+      SetLinkActive,
     };
   },
 };

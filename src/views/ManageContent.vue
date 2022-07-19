@@ -320,3 +320,41 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+
+input[type='checkbox'] {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  background: #001324;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 300ms linear;
+}
+input[type='checkbox']::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: 4px;
+  border-radius: 20px;
+  background-color: #F7F7FA;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: left 300ms linear;
+}
+input[type='checkbox']:checked {
+  background: #FF5064;
+}
+input[type='checkbox']:checked::before {
+  left: 26px;
+  background-color: #F7F7FA;
+}
+</style>

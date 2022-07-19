@@ -189,14 +189,9 @@ export default {
         ],
       },
     ]);
-    const setupBackgroundColor = (project) => {
-      let classStyle =
-        "ring-[" + project.color + "]" + " " + "bg-[" + project.color + "]";
-      return classStyle;
-    };
+   
     return {
       projects,
-      setupBackgroundColor,
     };
   },
 };
