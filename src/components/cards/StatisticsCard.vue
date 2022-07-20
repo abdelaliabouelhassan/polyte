@@ -78,12 +78,12 @@
 
 
 <script>
-import IconAssemble from "../../icons/IconAssemble.vue";
-import IconGeometries from "../../icons/IconGeometries.vue";
-import IconAnimations from "../../icons/IconAnimations.vue";
-import IconVariant from "../../icons/IconVariant.vue";
-import IconTextures from "../../icons/IconTextures.vue";
-import IconMaterials from "../../icons/IconMaterials.vue";
+import IconAssemble from "../../Icons/IconAssemble.vue";
+import IconGeometries from "../../Icons/IconGeometries.vue";
+import IconAnimations from "../../Icons/IconAnimations.vue";
+import IconVariant from "../../Icons/IconVariant.vue";
+import IconTextures from "../../Icons/IconTextures.vue";
+import IconMaterials from "../../Icons/IconMaterials.vue";
 export default {
   components: {
     IconAssemble,
