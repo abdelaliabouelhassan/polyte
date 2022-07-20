@@ -46,6 +46,7 @@
             </div>
           </button>
           <button
+           @click="openProject"
             type="button"
             class="
               w-full

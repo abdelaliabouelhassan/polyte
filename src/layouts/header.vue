@@ -1,7 +1,7 @@
 <template>
   <div
     class="
-      fixed
+      fixed z-40
       w-full
       bg-white
       px-10
