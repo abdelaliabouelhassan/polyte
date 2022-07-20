@@ -77,7 +77,7 @@ export default {
         name: "Overview",
         pathname: "overview",
         active: false,
-        children: [],
+        children: ['home'],
       },
       {
         name: "Manage Content",
