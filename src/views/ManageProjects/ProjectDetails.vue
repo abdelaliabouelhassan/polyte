@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="w-full flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center space-x-4">
               <div
                 class="
                   w-[89px]
@@ -105,6 +105,17 @@
               </div>
             </button>
           </div>
+          <div class=" w-full grid grid-cols-2 gap-20 pt-20">
+            <div>
+              <ProjectBriefingCard />
+            </div>
+             <div>
+              <ExternalContentCard />
+            </div>
+            <div>
+              <StatisticsCard />
+            </div>
+          </div>
         </div>
       </div>
     </template>
@@ -114,7 +125,9 @@
 <script>
 import SidebarLayout from "../../layouts/SidebarLayout.vue";
 import IconProject from "../../Icons/IconProject.vue";
-
+import ProjectBriefingCard from "../../components/cards/ProjectBriefingCard.vue";
+import ExternalContentCard from "../../components/cards/ExternalContentCard.vue";
+import StatisticsCard from "../../components/cards/StatisticsCard.vue";
 import SideBar from "./includes/SideBar.vue";
 import { ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
@@ -124,6 +137,9 @@ export default {
     SidebarLayout,
     SideBar,
     IconProject,
+    ProjectBriefingCard,
+    ExternalContentCard,
+    StatisticsCard
   },
   setup() {
     const router = useRouter();
