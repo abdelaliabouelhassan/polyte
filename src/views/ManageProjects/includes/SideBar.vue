@@ -15,7 +15,7 @@
           rounded-lg
         "
       >
-        All Products
+        All Projects
       </button>
     </div>
     <div>

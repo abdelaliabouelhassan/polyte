@@ -81,9 +81,9 @@ export default {
       },
       {
         name: "Manage Content",
-        pathname: "manage-content",
+        pathname: "manage-contents-Products",
         active: false,
-        children: [],
+        children: ['manage-contents-overview','manage-contents-variant-options','manage-contents-camera-views','manage-contents-integrateion'],
       },
       {
         name: "Manage Projects",

@@ -145,7 +145,7 @@
                       </tr>
                     </thead>
                     <tbody class="divide-tertiary-gray divide-y-4">
-                      <tr v-for="(product, index, key) in Products" :key="key">
+                      <tr v-for="(product, index, key) in Products" :key="key" @click="goToProduct(product)">
                         <td
                           class="
                             whitespace-nowrap
@@ -259,10 +259,12 @@
 </template>
 
 <script>
-import HomeLayout from "../layouts/HomeLayout.vue";
-import IconSearch from "../Icons/IconSearch.vue";
-import FilterIcon from "../Icons/FilterIcon.vue";
-import SelectIcon from "../Icons/SelectIcon.vue";
+import HomeLayout from "../../layouts/HomeLayout.vue";
+import IconSearch from "../../Icons/IconSearch.vue";
+import FilterIcon from "../../Icons/FilterIcon.vue";
+import SelectIcon from "../../Icons/SelectIcon.vue";
+import { useRouter } from "vue-router";
+
 import { ref } from "@vue/reactivity";
 export default {
   components: {
@@ -272,9 +274,10 @@ export default {
     SelectIcon,
   },
   setup() {
+     const router = useRouter();
     const Products = ref([
       {
-        image: "transparent-baby.png",
+        image: "../transparent-baby.png",
         name: "Angelcab Stroller",
         impressions: "6.820",
         options: "681",
@@ -314,8 +317,18 @@ export default {
         status: false,
       },
     ]);
+    const goToProduct = (product) => {
+       
+        router.push({
+            name: "manage-contents-overview",
+            params: {
+            id: 1,
+            },
+        });
+    }
     return {
       Products,
+      goToProduct
     };
   },
 };

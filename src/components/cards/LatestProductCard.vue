@@ -112,7 +112,7 @@ export default {
     setup(){
       const router = useRouter();
       const AllProducts = () => {
-        router.push({name:'manage-content'});
+        router.push({name:'manage-contents-Products'});
       };
 
       return {

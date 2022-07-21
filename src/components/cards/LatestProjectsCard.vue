@@ -3,6 +3,7 @@
     <div class="flex justify-between items-center w-full">
       <span class="text-primary-black font-bold text-3xl">Latest Projects</span>
       <button
+       @click="AllProjects"
         class="
           text-primary-black text-xl
           font-normal
@@ -20,9 +21,10 @@
     >
       <div class="grid grid-cols-2 gap-10 p-6">
         <div
-          class="flex flex-col items-center space-y-2"
+          class="flex flex-col items-center space-y-2 "
           v-for="(project, index, key) in projects"
           :key="key"
+          @click="goToProject(project)"
         >
           <div
             class="w-[110px] h-[90px] rounded-xl overflow-hidden cursor-pointer"
@@ -108,12 +110,15 @@
 import { ref } from "@vue/reactivity";
 import IconProject from "../../Icons/IconProject.vue";
 import IconStar from "../../Icons/IconStar.vue";
+import { useRouter } from "vue-router";
+
 export default {
   components: {
     IconProject,
     IconStar,
   },
   setup() {
+     const router = useRouter();
     const projects = ref([
       {
         name: "Adidas Sport Shoe",
@@ -189,9 +194,16 @@ export default {
         ],
       },
     ]);
-   
+    const AllProjects = () => {
+      router.push({name:"manage-projects-projects"});
+    }
+    const goToProject = (project) => {
+      router.push({name:"manage-projects-details",params:{id:1}});
+    }
     return {
       projects,
+      AllProjects,
+      goToProject
     };
   },
 };
