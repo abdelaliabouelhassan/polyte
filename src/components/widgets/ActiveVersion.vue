@@ -27,7 +27,7 @@
           "
         >
           <div class="w-full h-full object-contain">
-            <img src="../../../transparent-baby.png" alt="" />
+            <img src="https://polyte-app.herokuapp.com/transparent-baby.png" alt="" />
           </div>
         </div>
         <div class="w-3 h-3 rounded-md" style="background: #00ffba"></div>
