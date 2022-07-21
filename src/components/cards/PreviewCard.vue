@@ -20,7 +20,7 @@
     <div class="w-full bg-white rounded-2xl input-border h-[313px] flex relative">
       <div class="m-auto">
         <img
-          src="./../../../transparent-baby.png"
+          src="/../../transparent-baby.png"
           class="w-[300px] h-full"
           alt=""
         />
