@@ -53,6 +53,15 @@
             <div class=" col-span-2">
                 <ImpressionsCard />
             </div>
+            <div>
+                <Devices />
+            </div>
+            <div>
+              <OperatingSystem />
+            </div>
+            <div class=" w-full col-span-2">
+              <InfoCard />
+            </div>
           </div>
         </div>
       </div>
@@ -66,6 +75,9 @@ import SideBar from "./includes/SideBar.vue";
 import PreviewCard from "../../components/cards/PreviewCard.vue";
 import ImpressionsCard from "../../components/cards/ImpressionsCard.vue";
 import ActiveVersion from "../../components/widgets/ActiveVersion.vue";
+import OperatingSystem from "../../components/cards/OperatingSystem.vue";
+import Devices from "../../components/cards/DevicesCard.vue";
+import InfoCard from "../../components/cards/InfoCard.vue";
 import AppKey from "../../components/widgets/AppKey.vue";
 import { ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
@@ -77,7 +89,10 @@ export default {
     PreviewCard,
     ActiveVersion,
     AppKey,
-    ImpressionsCard
+    ImpressionsCard,
+    OperatingSystem,
+    Devices,
+    InfoCard
   },
   setup() {
     const router = useRouter();
