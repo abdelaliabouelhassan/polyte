@@ -7,6 +7,7 @@
         >
         <div class="flex flex-col items-start space-y-4 w-full">
           <button
+            @click="NewProject"
             type="button"
             class="
               w-full
@@ -46,7 +47,7 @@
             </div>
           </button>
           <button
-           @click="openProject"
+            @click="openProject"
             type="button"
             class="
               w-full
@@ -175,13 +176,23 @@
                     <IconProject />
                   </div>
 
-                  <div class="absolute top-2 right-2" v-if="project.favorite"  @click="project.favorite = !project.favorite">
+                  <div
+                    class="absolute top-2 right-2"
+                    v-if="project.favorite"
+                    @click="project.favorite = !project.favorite"
+                  >
                     <IconStar />
                   </div>
-                  <button class="absolute top-2 right-2 hidden group-hover:block" v-else @click="project.favorite = !project.favorite">
+                  <button
+                    class="absolute top-2 right-2 hidden group-hover:block"
+                    v-else
+                    @click="project.favorite = !project.favorite"
+                  >
                     <IconStartOpacity />
                   </button>
-                  <button class="absolute bottom-2 right-2 "><Iconshare /></button>
+                  <button class="absolute bottom-2 right-2">
+                    <Iconshare />
+                  </button>
                 </div>
               </div>
             </div>
@@ -210,12 +221,12 @@
           </div>
         </div>
       </div>
+      <NewProjectModal ref="NewProjectModal" />
     </template>
   </SidebarLayout>
 </template>
 
 <script>
-
 import SidebarLayout from "../../layouts/SidebarLayout.vue";
 import IconSearch from "../../Icons/IconSearch.vue";
 import FilterIcon from "../../Icons/FilterIcon.vue";
@@ -225,6 +236,7 @@ import IconProject from "../../Icons/IconProject.vue";
 import IconStar from "../../Icons/IconStar.vue";
 import IconStartOpacity from "../../Icons/IconStartOpacity.vue";
 import Iconshare from "../../Icons/Iconshare.vue";
+import NewProjectModal from "../../components/modals/ManageProjects/NewProjectModal.vue";
 import { ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
 
@@ -238,11 +250,13 @@ export default {
     IconProject,
     IconStar,
     IconStartOpacity,
-    Iconshare
+    Iconshare,
+    NewProjectModal,
   },
   setup() {
     const router = useRouter();
     const route = useRoute();
+    const NewProjectModal = ref(null);
     const projects = ref([
       {
         name: "Adidas Sport Shoe",
@@ -377,13 +391,18 @@ export default {
         ],
       },
     ]);
-    
-   const openProject = () =>  {
-    router.push({name:'manage-projects-details', params: {id: '1'}});
-   }
-   return {
+
+    const openProject = () => {
+      router.push({ name: "manage-projects-details", params: { id: "1" } });
+    };
+    const NewProject = () => {
+      NewProjectModal.value.OpenModal();
+    };
+    return {
       projects,
       openProject,
+      NewProject,
+      NewProjectModal,
     };
   },
 };

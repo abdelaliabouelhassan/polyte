@@ -10,6 +10,15 @@
   border: 1px solid #00132410;
 }
 
+.input-ring {
+  border: 3px solid #7580FC;
+}
+
+
+.modal-border {
+  border: 10px solid #DDE0E3;
+  box-shadow: 0px 12px 29px #00000008;
+}
 
 
 /* width */

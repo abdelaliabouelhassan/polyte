@@ -23,7 +23,50 @@
             </div>
           </div>
           <div class="w-full flex justify-between items-center">
-            <div class="flex items-center space-x-4">
+           <div class="flex items-center space-x-4 relative" @mouseover="show = true" @mouseleave="show = false">
+           <div class="flex items-center space-x-2 absolute -top-10 -left-10 p-2 z-20 bg-white input-border rounded-md " v-show="show">
+            <div
+              class="w-5 h-5 rounded-full cursor-pointer"
+              style="background: #001324"
+              @click="SelectColor('#001324')"
+            ></div>
+            <div
+              class="
+                w-5
+                h-5
+                rounded-full
+                ring-2 ring-primary-black
+                cursor-pointer
+              "
+              style="background: #ffffff"
+              @click="SelectColor('#ffffff')"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full cursor-pointer"
+              style="background: #64bdfd"
+              @click="SelectColor('#64bdfd')"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full cursor-pointer"
+              style="background: #6482fc"
+              @click="SelectColor('#6482fc')"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full cursor-pointer"
+              style="background: #fec964"
+              @click="SelectColor('#fec964')"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full cursor-pointer"
+              style="background: #fa5a3d"
+              @click="SelectColor('#fa5a3d')"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full cursor-pointer"
+              style="background: #28f49e"
+              @click="SelectColor('#28f49e')"
+            ></div>
+          </div>
               <div
                 class="
                   w-[89px]
@@ -37,11 +80,11 @@
                   duration-300
                   ease-in-out
                 "
-                :style="{ border: '6px solid ' + '#6482FF' + '36' }"
+                :style="{ border: '6px solid ' + ProjectColor + '36' }"
               >
                 <div
                   class="w-full h-full flex relative"
-                  :style="{ background: '#6482FF' }"
+                  :style="{ background: ProjectColor }"
                 >
                   <div class="m-auto">
                     <IconProject />
@@ -204,11 +247,26 @@
                 "
               >
                 <div class="m-auto flex items-center space-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18.164" height="18.164" viewBox="0 0 18.164 18.164">
-  <path id="Path_36" data-name="Path 36" d="M30.635,22.847h7.129a.649.649,0,0,0,0-1.3H30.635a.649.649,0,1,0,0,1.3" transform="translate(-25.118 -18.05)" fill="#1d1d1b"/>
-  <path id="Path_37" data-name="Path 37" d="M0,0V14.609a3.559,3.559,0,0,0,3.555,3.555H14.609a3.559,3.559,0,0,0,3.555-3.555V0ZM16.865,14.609a2.257,2.257,0,0,1-2.256,2.256H3.555A2.257,2.257,0,0,1,1.3,14.609V1.3H16.865Z" fill="#1d1d1b"/>
-</svg>
-
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18.164"
+                    height="18.164"
+                    viewBox="0 0 18.164 18.164"
+                  >
+                    <path
+                      id="Path_36"
+                      data-name="Path 36"
+                      d="M30.635,22.847h7.129a.649.649,0,0,0,0-1.3H30.635a.649.649,0,1,0,0,1.3"
+                      transform="translate(-25.118 -18.05)"
+                      fill="#1d1d1b"
+                    />
+                    <path
+                      id="Path_37"
+                      data-name="Path 37"
+                      d="M0,0V14.609a3.559,3.559,0,0,0,3.555,3.555H14.609a3.559,3.559,0,0,0,3.555-3.555V0ZM16.865,14.609a2.257,2.257,0,0,1-2.256,2.256H3.555A2.257,2.257,0,0,1,1.3,14.609V1.3H16.865Z"
+                      fill="#1d1d1b"
+                    />
+                  </svg>
 
                   <span> Archive Project</span>
                 </div>
@@ -245,12 +303,19 @@ export default {
   setup() {
     const router = useRouter();
     const route = useRoute();
+    const show = ref(false);
     const Privat = ref(false);
-
+    const ProjectColor = ref("#6482FF")
+    const SelectColor = (color) => {
+      ProjectColor.value = color
+    };
     return {
       router,
       route,
       Privat,
+      SelectColor,
+      show,
+      ProjectColor,
     };
   },
 };
