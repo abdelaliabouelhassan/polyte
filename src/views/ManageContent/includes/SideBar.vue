@@ -30,7 +30,7 @@
           :key="key"
           class="
             text-xl
-            font-normal font-Inter
+             font-Inter
             text-primary-black
             hover:bg-white
             py-2
