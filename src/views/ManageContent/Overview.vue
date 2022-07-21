@@ -42,13 +42,16 @@
            
           </div>
 
-          <div class=" w-full grid grid-cols-2 gap-x-10 gap-y-5">
+          <div class=" w-full grid grid-cols-2 gap-x-10 gap-y-10">
             <div>
                 <PreviewCard />
             </div>
             <div class=" flex flex-col items-start space-y-14">
                 <ActiveVersion />
                 <AppKey />
+            </div>
+            <div class=" col-span-2">
+                <ImpressionsCard />
             </div>
           </div>
         </div>
@@ -61,6 +64,7 @@
 import SidebarLayout from "../../layouts/SidebarLayout.vue";
 import SideBar from "./includes/SideBar.vue";
 import PreviewCard from "../../components/cards/PreviewCard.vue";
+import ImpressionsCard from "../../components/cards/ImpressionsCard.vue";
 import ActiveVersion from "../../components/widgets/ActiveVersion.vue";
 import AppKey from "../../components/widgets/AppKey.vue";
 import { ref } from "@vue/reactivity";
@@ -72,7 +76,8 @@ export default {
     SideBar,
     PreviewCard,
     ActiveVersion,
-    AppKey
+    AppKey,
+    ImpressionsCard
   },
   setup() {
     const router = useRouter();
