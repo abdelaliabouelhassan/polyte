@@ -145,8 +145,13 @@
                       </tr>
                     </thead>
                     <tbody class="divide-tertiary-gray divide-y-4">
-                      <tr v-for="(product, index, key) in Products" :key="key" @click="goToProduct(product)">
+                      <tr
+                        class="hover:bg-secondary-gray cursor-pointer"
+                        v-for="(product, index, key) in Products"
+                        :key="key"
+                      >
                         <td
+                          @click="goToProduct(product)"
                           class="
                             whitespace-nowrap
                             py-4
@@ -173,6 +178,7 @@
                           </div>
                         </td>
                         <td
+                          @click="goToProduct(product)"
                           class="
                             whitespace-nowrap
                             py-4
@@ -185,6 +191,7 @@
                           {{ product.name }}
                         </td>
                         <td
+                          @click="goToProduct(product)"
                           class="
                             whitespace-nowrap
                             py-4
@@ -197,6 +204,7 @@
                           {{ product.impressions }}
                         </td>
                         <td
+                          @click="goToProduct(product)"
                           class="
                             whitespace-nowrap
                             py-4
@@ -209,6 +217,7 @@
                           {{ product.options }}
                         </td>
                         <td
+                          @click="goToProduct(product)"
                           class="
                             whitespace-nowrap
                             py-4
@@ -274,7 +283,7 @@ export default {
     SelectIcon,
   },
   setup() {
-     const router = useRouter();
+    const router = useRouter();
     const Products = ref([
       {
         image: "../transparent-baby.png",
@@ -292,7 +301,7 @@ export default {
         views: "23",
         status: true,
       },
-       {
+      {
         image: "",
         name: "Adidas Sport Shoe",
         impressions: "3.456",
@@ -308,7 +317,7 @@ export default {
         views: "2",
         status: true,
       },
-       {
+      {
         image: "",
         name: "Byton M-Byte",
         impressions: "9.716",
@@ -318,17 +327,16 @@ export default {
       },
     ]);
     const goToProduct = (product) => {
-       
-        router.push({
-            name: "manage-contents-overview",
-            params: {
-            id: 1,
-            },
-        });
-    }
+      router.push({
+        name: "manage-contents-overview",
+        params: {
+          id: 1,
+        },
+      });
+    };
     return {
       Products,
-      goToProduct
+      goToProduct,
     };
   },
 };
@@ -336,8 +344,7 @@ export default {
 
 
 <style scoped>
-
-input[type='checkbox'] {
+input[type="checkbox"] {
   position: relative;
   width: 50px;
   height: 28px;
@@ -350,24 +357,24 @@ input[type='checkbox'] {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: background 300ms linear;
 }
-input[type='checkbox']::before {
+input[type="checkbox"]::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   top: 4px;
   left: 4px;
   border-radius: 20px;
-  background-color: #F7F7FA;
+  background-color: #f7f7fa;
   transform: scale(1.1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: left 300ms linear;
 }
-input[type='checkbox']:checked {
-  background: #FF5064;
+input[type="checkbox"]:checked {
+  background: #ff5064;
 }
-input[type='checkbox']:checked::before {
+input[type="checkbox"]:checked::before {
   left: 26px;
-  background-color: #F7F7FA;
+  background-color: #f7f7fa;
 }
 </style>

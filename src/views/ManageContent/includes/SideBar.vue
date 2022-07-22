@@ -2,7 +2,7 @@
   <div class="w-full flex flex-col items-start space-y-10 px-5 font-Inter">
     <div class="w-full pl-4 space-y-8">
       <button
-        @click="router.go(-1)"
+        @click="goBack"
         class="
           text-xl
           font-normal
@@ -96,6 +96,9 @@ export default {
         }
       });
     };
+    const goBack = () => {
+      router.push({name:'manage-contents-Products'})
+    }
     onMounted(() => {
       setTimeout(() => {
         SetLinkActive();
@@ -108,6 +111,7 @@ export default {
       SetActive,
       GoTo,
       SetLinkActive,
+      goBack
     };
   },
 };
