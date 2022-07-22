@@ -57,10 +57,7 @@
 
 
 <script>
-import 'highlight.js/styles/stackoverflow-light.css'
 
-import 'highlight.js/lib/common';
-import hljsVuePlugin from "@highlightjs/vue-plugin";
 
 export default {
   data(){
@@ -89,9 +86,7 @@ export default {
     
     }
    },
-   components: {
-      highlightjs: hljsVuePlugin.component
-    },
+  
    
     
 };
