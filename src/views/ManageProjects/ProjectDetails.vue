@@ -45,6 +45,10 @@
                 v-show="show"
               >
                 <div
+                  class="bg-white absolute top-[2.19rem] left-24 w-2 h-1.5"
+                  style="clip-path: polygon(50% 100%, 0 0, 100% 0)"
+                ></div>
+                <div
                   class="w-5 h-5 rounded-full cursor-pointer"
                   style="background: #001324"
                   @click="SelectColor('#001324')"
