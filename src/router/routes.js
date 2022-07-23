@@ -13,9 +13,15 @@ import Integrateion from '../views/ManageContent/Integrateion.vue'
 import ProjectIndex from '../views/ManageProjects/index.vue'
 import Projects from '../views/ManageProjects/Projects.vue'
 import ProjectDetails from '../views/ManageProjects/ProjectDetails.vue'
-
-
-import Settings from '../views/Settings.vue'
+//Settings
+import SettingsIndex from '../views/Settings/index.vue'
+import SettingsOverview from '../views/Settings/Overview.vue'
+import SettingsSubscription from '../views/Settings/Subscription.vue'
+import SettingsManageUsers from '../views/Settings/ManageUsers.vue'
+import SettingsManageRoles from '../views/Settings/ManageRoles.vue'
+import SettingsManageLicences from '../views/Settings/ManageLicences.vue'
+import SettingsManageCompanies from '../views/Settings/ManageCompanies.vue'
+import SettingsBilling from '../views/Settings/Billing.vue'
 const routes = [
     { path: '/', component: Overview, name: 'home' },
     { path: '/overview', component: Overview, name: 'overview' },
@@ -35,9 +41,19 @@ const routes = [
             { path: 'create', component: ProjectDetails, name: 'manage-projects-create' },
         ]
     },
+    {
+        path: '/settings', component: SettingsIndex, name: 'app-settings', children: [
+            { path: 'overview', component: SettingsOverview, name: 'app-settings-overview' },
+            { path: 'subscription', component: SettingsSubscription, name: 'app-settings-subscription' },
+            { path: 'manage-users', component: SettingsManageUsers, name: 'app-settings-manage-users' },
+            { path: 'manage-roles', component: SettingsManageRoles, name: 'app-settings-manage-roles' },
+            { path: 'manage-licences', component: SettingsManageLicences, name: 'app-settings-manage-licences' },
+            { path: 'manage-companies', component: SettingsManageCompanies, name: 'app-settings-manage-companies' },
+            { path: 'billing', component: SettingsBilling, name: 'app-settings-billing' },
+        ]
+    },
 
-
-    { path: '/settings', component: Settings, name: 'settings' },
+   
 ];
 
 const router = createRouter({

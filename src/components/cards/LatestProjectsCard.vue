@@ -3,14 +3,15 @@
     <div class="flex justify-between items-center w-full">
       <span class="text-primary-black font-bold text-3xl">Latest Projects</span>
       <button
-       @click="AllProjects"
+        @click="AllProjects"
         class="
           text-primary-black text-xl
           font-normal
           py-2
           px-4
           rounded-md
-          bg-primary-gray hover:bg-gray-300 
+          bg-primary-gray
+          hover:bg-gray-300
         "
       >
         All Projects
@@ -21,7 +22,7 @@
     >
       <div class="grid grid-cols-2 gap-10 p-6">
         <div
-          class="flex flex-col items-center space-y-2 "
+          class="flex flex-col items-center space-y-2"
           v-for="(project, index, key) in projects"
           :key="key"
           @click="goToProject(project)"
@@ -79,7 +80,19 @@
           rounded-t-md
         "
       >
-        <button class="flex w-full bg-primary-blue hover:bg-opacity-90 py-2 px-2 rounded-lg max-w-xs m-auto">
+        <button
+          class="
+            flex
+            w-full
+            bg-primary-blue
+            hover:bg-opacity-90
+            py-2
+            px-2
+            rounded-lg
+            max-w-xs
+            m-auto
+          "
+        >
           <div class="m-auto flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +131,7 @@ export default {
     IconStar,
   },
   setup() {
-     const router = useRouter();
+    const router = useRouter();
     const projects = ref([
       {
         name: "Adidas Sport Shoe",
@@ -190,20 +203,19 @@ export default {
             image:
               "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
           },
-          
         ],
       },
     ]);
     const AllProjects = () => {
-      router.push({name:"manage-projects-projects"});
-    }
+      router.push({ name: "manage-projects-projects" });
+    };
     const goToProject = (project) => {
-      router.push({name:"manage-projects-details",params:{id:1}});
-    }
+      router.push({ name: "manage-projects-details", params: { id: 1 } });
+    };
     return {
       projects,
       AllProjects,
-      goToProject
+      goToProject,
     };
   },
 };

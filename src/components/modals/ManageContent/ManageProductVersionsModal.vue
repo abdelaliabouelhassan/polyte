@@ -1,6 +1,6 @@
 <template>
   <div
-   v-if="open"
+    v-if="open"
     class="relative z-50 font-Inter"
     aria-labelledby="modal-title"
     role="dialog"
@@ -72,7 +72,7 @@
                   space-x-2
                 "
               >
-              <IconTrash />
+                <IconTrash />
                 <span> Delete all unused</span>
               </button>
             </div>
@@ -81,7 +81,16 @@
           <div class="w-full">
             <div class="flex flex-col">
               <div class="overflow-x-auto">
-                <div class="inline-block min-w-full py-2 align-middle max-h-96 h-full">
+                <div
+                  class="
+                    inline-block
+                    min-w-full
+                    py-2
+                    align-middle
+                    max-h-96
+                    h-full
+                  "
+                >
                   <table
                     class="
                       min-w-full
@@ -217,7 +226,7 @@
                         >
                           <div class="flex items-center justify-end space-x-4">
                             <button
-                             @click="ChangeStatus(product)"
+                              @click="ChangeStatus(product)"
                               :class="{
                                 'bg-secondary-green px-5': product.status,
                               }"
@@ -256,10 +265,16 @@
                                 py-3
                                 px-4
                                 rounded-lg
-                                hover:bg-primary-red group
+                                hover:bg-primary-red
+                                group
                               "
                             >
-                              <IconTrash class="  text-primary-black text-opacity-[0.499] group-hover:text-white" />
+                              <IconTrash
+                                class="
+                                  text-primary-black text-opacity-[0.499]
+                                  group-hover:text-white
+                                "
+                              />
                             </button>
                           </div>
                         </td>
@@ -267,12 +282,25 @@
                     </tbody>
                   </table>
                 </div>
-
-              
               </div>
-                <div class=" w-full flex pt-4">
-                    <button @click="open = false" class=" m-auto text-xl font-normal font-Inter text-primary-black py-2 px-6 rounded-lg bg-quaternary-gray hover:bg-secondary-gray">Done</button>
-                </div>
+              <div class="w-full flex pt-4">
+                <button
+                  @click="open = false"
+                  class="
+                    m-auto
+                    text-xl
+                    font-normal font-Inter
+                    text-primary-black
+                    py-2
+                    px-6
+                    rounded-lg
+                    bg-quaternary-gray
+                    hover:bg-secondary-gray
+                  "
+                >
+                  Done
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -289,10 +317,10 @@ import IconVersion from "../../../Icons/IconVersion.vue";
 export default {
   components: {
     IconTrash,
-    IconVersion
+    IconVersion,
   },
   setup() {
-    const open = ref(false)
+    const open = ref(false);
     const Products = ref([
       {
         image: "../../../transparent-baby.png",
@@ -312,21 +340,18 @@ export default {
         date: "2022-08-02",
         status: false,
       },
-   
-      
- 
     ]);
     const ChangeStatus = (product) => {
       product.status = !product.status;
     };
     const openModal = () => {
-        open.value = true;
-    }
+      open.value = true;
+    };
     return {
       Products,
       ChangeStatus,
       open,
-      openModal
+      openModal,
     };
   },
 };

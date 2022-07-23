@@ -52,10 +52,13 @@
           />
         </svg>
       </button>
-      <highlightjs language="js" :code="'<script type=‘module‘>' + code + ' \n</script>'" />
+      <highlightjs
+        language="js"
+        :code="'<script type=‘module‘>' + code + ' \n</script>'"
+      />
     </div>
 
-     <div class="w-full bg-white rounded-2xl input-border p-5 flex relative">
+    <div class="w-full bg-white rounded-2xl input-border p-5 flex relative">
       <button
         @click="copyCode2"
         class="
@@ -91,22 +94,20 @@
       </button>
       <highlightjs language="js" :code="code2" />
     </div>
-   
   </div>
 </template>
 
 <script>
-
 export default {
   props: {
     code: {
       type: String,
       required: true,
     },
-    code2:{
-        type:String,
-        required:true,
-    }
+    code2: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     copyCode() {
@@ -118,17 +119,16 @@ export default {
       document.execCommand("copy");
       textArea.remove();
     },
-    copyCode2(){
-        var code = this.code2;
-        var textArea = document.createElement("textarea");
-        textArea.value = code;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        textArea.remove();
-    }
+    copyCode2() {
+      var code = this.code2;
+      var textArea = document.createElement("textarea");
+      textArea.value = code;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      textArea.remove();
+    },
   },
- 
 };
 </script>
 

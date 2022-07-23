@@ -93,7 +93,7 @@
 
           <div class="w-full flex justify-between items-center">
             <button
-             @click="close"
+              @click="close"
               type="button"
               class="
                 inline-flex
@@ -158,20 +158,20 @@ export default {
     const openModal = () => {
       open.value = true;
     };
-    const close = ()  =>{
+    const close = () => {
       open.value = false;
-    }
+    };
     const create = () => {
       //code
 
       //close
       close();
-    }
+    };
     return {
       openModal,
       open,
       create,
-      close
+      close,
     };
   },
 };

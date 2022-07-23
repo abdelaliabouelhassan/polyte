@@ -23,50 +23,69 @@
             </div>
           </div>
           <div class="w-full flex justify-between items-center">
-           <div class="flex items-center space-x-4 relative" @mouseover="show = true" @mouseleave="show = false">
-           <div class="flex items-center space-x-2 absolute -top-10 -left-10 p-2 z-20 bg-white input-border rounded-md " v-show="show">
             <div
-              class="w-5 h-5 rounded-full cursor-pointer"
-              style="background: #001324"
-              @click="SelectColor('#001324')"
-            ></div>
-            <div
-              class="
-                w-5
-                h-5
-                rounded-full
-                ring-2 ring-primary-black
-                cursor-pointer
-              "
-              style="background: #ffffff"
-              @click="SelectColor('#ffffff')"
-            ></div>
-            <div
-              class="w-5 h-5 rounded-full cursor-pointer"
-              style="background: #64bdfd"
-              @click="SelectColor('#64bdfd')"
-            ></div>
-            <div
-              class="w-5 h-5 rounded-full cursor-pointer"
-              style="background: #6482fc"
-              @click="SelectColor('#6482fc')"
-            ></div>
-            <div
-              class="w-5 h-5 rounded-full cursor-pointer"
-              style="background: #fec964"
-              @click="SelectColor('#fec964')"
-            ></div>
-            <div
-              class="w-5 h-5 rounded-full cursor-pointer"
-              style="background: #fa5a3d"
-              @click="SelectColor('#fa5a3d')"
-            ></div>
-            <div
-              class="w-5 h-5 rounded-full cursor-pointer"
-              style="background: #28f49e"
-              @click="SelectColor('#28f49e')"
-            ></div>
-          </div>
+              class="flex items-center space-x-4 relative"
+              @mouseover="show = true"
+              @mouseleave="show = false"
+            >
+              <div
+                class="
+                  flex
+                  items-center
+                  space-x-2
+                  absolute
+                  -top-10
+                  -left-10
+                  p-2
+                  z-20
+                  bg-white
+                  input-border
+                  rounded-md
+                "
+                v-show="show"
+              >
+                <div
+                  class="w-5 h-5 rounded-full cursor-pointer"
+                  style="background: #001324"
+                  @click="SelectColor('#001324')"
+                ></div>
+                <div
+                  class="
+                    w-5
+                    h-5
+                    rounded-full
+                    ring-2 ring-primary-black
+                    cursor-pointer
+                  "
+                  style="background: #ffffff"
+                  @click="SelectColor('#ffffff')"
+                ></div>
+                <div
+                  class="w-5 h-5 rounded-full cursor-pointer"
+                  style="background: #64bdfd"
+                  @click="SelectColor('#64bdfd')"
+                ></div>
+                <div
+                  class="w-5 h-5 rounded-full cursor-pointer"
+                  style="background: #6482fc"
+                  @click="SelectColor('#6482fc')"
+                ></div>
+                <div
+                  class="w-5 h-5 rounded-full cursor-pointer"
+                  style="background: #fec964"
+                  @click="SelectColor('#fec964')"
+                ></div>
+                <div
+                  class="w-5 h-5 rounded-full cursor-pointer"
+                  style="background: #fa5a3d"
+                  @click="SelectColor('#fa5a3d')"
+                ></div>
+                <div
+                  class="w-5 h-5 rounded-full cursor-pointer"
+                  style="background: #28f49e"
+                  @click="SelectColor('#28f49e')"
+                ></div>
+              </div>
               <div
                 class="
                   w-[89px]
@@ -305,9 +324,9 @@ export default {
     const route = useRoute();
     const show = ref(false);
     const Privat = ref(false);
-    const ProjectColor = ref("#6482FF")
+    const ProjectColor = ref("#6482FF");
     const SelectColor = (color) => {
-      ProjectColor.value = color
+      ProjectColor.value = color;
     };
     return {
       router,

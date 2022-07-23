@@ -139,7 +139,6 @@ export default {
               opacity: 0.4,
             },
           },
-         
         },
         yaxis: {
           labels: {

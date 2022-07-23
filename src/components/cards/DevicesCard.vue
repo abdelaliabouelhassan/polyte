@@ -156,16 +156,20 @@
           >
         </div>
       </div>
-      <div class="w-full bg-secondary-gray rounded-full h-[28px] overflow-hidden flex items-center">
-        <div class=" h-full" style="background:#F26596;width:63%;">
-
-        </div>
-        <div class=" h-full" style="background:#0465D6;width:12%;">
-
-        </div>
-        <div class=" h-full" style="background:#04D6D6;width:25%;">
-
-        </div>
+      <div
+        class="
+          w-full
+          bg-secondary-gray
+          rounded-full
+          h-[28px]
+          overflow-hidden
+          flex
+          items-center
+        "
+      >
+        <div class="h-full" style="background: #f26596; width: 63%"></div>
+        <div class="h-full" style="background: #0465d6; width: 12%"></div>
+        <div class="h-full" style="background: #04d6d6; width: 25%"></div>
       </div>
     </div>
   </div>

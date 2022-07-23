@@ -38,7 +38,7 @@
         >
         <div class="mt-1 w-full">
           <input
-           v-model="store.NewProject.name"
+            v-model="store.NewProject.name"
             type="text"
             name="Name"
             id="Name"
@@ -76,7 +76,10 @@
         >
           <div>
             <svg
-             :class="{' bg-primary-black bg-opacity-10':store.NewProject.color == '#ffffff'}"
+              :class="{
+                ' bg-primary-black bg-opacity-10':
+                  store.NewProject.color == '#ffffff',
+              }"
               xmlns="http://www.w3.org/2000/svg"
               width="19.478"
               height="22.768"
@@ -140,22 +143,22 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity';
+import { ref } from "@vue/reactivity";
 import IconProject from "../../../../Icons/IconProject.vue";
-import { useStore } from "../../../../stores/NewProjectStore.js"
+import { useStore } from "../../../../stores/NewProjectStore.js";
 
 export default {
   components: {
     IconProject,
   },
   setup() {
-     const store = useStore();
+    const store = useStore();
     const SelectColor = (mycolor) => {
       store.NewProject.color = mycolor;
     };
     return {
-        SelectColor,
-        store
+      SelectColor,
+      store,
     };
   },
 };

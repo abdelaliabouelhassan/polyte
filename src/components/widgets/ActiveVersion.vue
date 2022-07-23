@@ -27,27 +27,47 @@
           "
         >
           <div class="w-full h-full object-contain">
-            <img src="https://polyte-app.herokuapp.com/transparent-baby.png" alt="" />
+            <img
+              src="https://polyte-app.herokuapp.com/transparent-baby.png"
+              alt=""
+            />
           </div>
         </div>
         <div class="w-3 h-3 rounded-md" style="background: #00ffba"></div>
-        <span class=" text-xl text-primary-black font-normal text-opacity-80">Adidas Sport Shoe</span>
+        <span class="text-xl text-primary-black font-normal text-opacity-80"
+          >Adidas Sport Shoe</span
+        >
       </div>
-      <button @click="Change" class=" text-xl font-normal text-primary-black font-Inter bg-quaternary-gray hover:bg-secondary-gray py-2 px-6 rounded-md">Change Version</button>
+      <button
+        @click="Change"
+        class="
+          text-xl
+          font-normal
+          text-primary-black
+          font-Inter
+          bg-quaternary-gray
+          hover:bg-secondary-gray
+          py-2
+          px-6
+          rounded-md
+        "
+      >
+        Change Version
+      </button>
     </div>
     <ManageProductVersionsModal ref="ManageProductVersions" />
   </div>
 </template>
 
 <script>
-import { ref } from '@vue/reactivity';
+import { ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
 import ManageProductVersionsModal from "../../components/modals/ManageContent/ManageProductVersionsModal.vue";
 export default {
   setup() {
     const router = useRouter();
     const route = useRoute();
-    const ManageProductVersions = ref(null)
+    const ManageProductVersions = ref(null);
     const AllFunctions = () => {
       router.push({
         name: "manage-contents-variant-options",
@@ -55,17 +75,17 @@ export default {
       });
     };
     const Change = () => {
-        ManageProductVersions.value.openModal();
-    }
+      ManageProductVersions.value.openModal();
+    };
     return {
       AllFunctions,
       Change,
-      ManageProductVersions 
+      ManageProductVersions,
     };
   },
-  components:{
+  components: {
     ManageProductVersionsModal,
-  }
+  },
 };
 </script>
 

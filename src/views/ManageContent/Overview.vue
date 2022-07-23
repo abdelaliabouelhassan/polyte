@@ -6,7 +6,6 @@
     <template v-slot:content>
       <div class="py-10 max-w-7xl m-auto px-4 pl-8 space-y-24">
         <div class="w-full space-y-20 pt-16">
-        
           <div class="w-full flex justify-between items-start">
             <div class="flex items-center space-x-4 relative">
               <div class="flex flex-col items-start space-y-1">
@@ -25,41 +24,36 @@
                 >
               </div>
             </div>
-              <div class="flex items-center space-x-5 space-y-1">
+            <div class="flex items-center space-x-5 space-y-1">
               <span
-                class="
-                  text-xl
-                  font-Inter
-                  text-opacity-60 text-primary-black
-                "
-                :class="{'font-bold text-primary-red':!onAir}"
+                class="text-xl font-Inter text-opacity-60 text-primary-black"
+                :class="{ 'font-bold text-primary-red': !onAir }"
                 >{{ onAir ? "ON AIR" : "OFFLINE" }}</span
               >
               <div>
                 <input type="checkbox" v-model="onAir" />
               </div>
             </div>
-           
           </div>
 
-          <div class=" w-full grid grid-cols-2 gap-x-10 gap-y-10">
+          <div class="w-full grid grid-cols-2 gap-x-10 gap-y-10">
             <div>
-                <PreviewCard />
+              <PreviewCard />
             </div>
-            <div class=" flex flex-col items-start space-y-14">
-                <ActiveVersion />
-                <AppKey />
+            <div class="flex flex-col items-start space-y-14">
+              <ActiveVersion />
+              <AppKey />
             </div>
-            <div class=" col-span-2">
-                <ImpressionsCard />
+            <div class="col-span-2">
+              <ImpressionsCard />
             </div>
             <div>
-                <Devices />
+              <Devices />
             </div>
             <div>
               <OperatingSystem />
             </div>
-            <div class=" w-full col-span-2">
+            <div class="w-full col-span-2">
               <InfoCard />
             </div>
           </div>
@@ -92,7 +86,7 @@ export default {
     ImpressionsCard,
     OperatingSystem,
     Devices,
-    InfoCard
+    InfoCard,
   },
   setup() {
     const router = useRouter();
@@ -101,7 +95,7 @@ export default {
     return {
       router,
       route,
-      onAir
+      onAir,
     };
   },
 };
@@ -109,8 +103,7 @@ export default {
 
 
 <style scoped>
-
-input[type='checkbox'] {
+input[type="checkbox"] {
   position: relative;
   width: 50px;
   height: 28px;
@@ -123,24 +116,24 @@ input[type='checkbox'] {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: background 300ms linear;
 }
-input[type='checkbox']::before {
+input[type="checkbox"]::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   top: 4px;
   left: 4px;
   border-radius: 20px;
-  background-color: #F7F7FA;
+  background-color: #f7f7fa;
   transform: scale(1.1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: left 300ms linear;
 }
-input[type='checkbox']:checked {
-  background: #FF5064;
+input[type="checkbox"]:checked {
+  background: #ff5064;
 }
-input[type='checkbox']:checked::before {
+input[type="checkbox"]:checked::before {
   left: 26px;
-  background-color: #F7F7FA;
+  background-color: #f7f7fa;
 }
 </style>

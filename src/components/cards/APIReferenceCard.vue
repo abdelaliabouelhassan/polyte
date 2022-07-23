@@ -5,7 +5,7 @@
     </div>
     <div class="w-full bg-white rounded-2xl input-border p-5 flex relative">
       <button
-       @click="copyCode"
+        @click="copyCode"
         class="
           text-xl
           font-normal
@@ -17,7 +17,10 @@
           px-4
           rounded-md
           focus:ring-2
-          ring-secondary-gray absolute right-4 top-2.5
+          ring-secondary-gray
+          absolute
+          right-4
+          top-2.5
         "
       >
         <svg
@@ -34,39 +37,30 @@
           />
         </svg>
       </button>
-      <highlightjs
-        language="js"
-        :code="'<script>' + code  +' \n</script>'"
-    />
+      <highlightjs language="js" :code="'<script>' + code + ' \n</script>'" />
     </div>
   </div>
 </template>
 
 <script>
-
-
 export default {
-  props:{
-    code:{
-       type:String,
-       required:true
-
-    }
+  props: {
+    code: {
+      type: String,
+      required: true,
+    },
   },
-   methods:{
-    copyCode(){
-        var code = this.code;
-        var textArea = document.createElement("textarea");
-        textArea.value = code;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        textArea.remove();
-    
-    }
-   },
-   
-    
+  methods: {
+    copyCode() {
+      var code = this.code;
+      var textArea = document.createElement("textarea");
+      textArea.value = code;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      textArea.remove();
+    },
+  },
 };
 </script>
 

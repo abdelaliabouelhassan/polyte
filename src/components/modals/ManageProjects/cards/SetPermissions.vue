@@ -43,7 +43,7 @@
         >This project can be seen and edited by my teammates</span
       >
       <div class="flex items-center space-x-2">
-         <div>
+        <div>
           <input type="checkbox" v-model="store.Permissions.Privat" />
         </div>
         <span
@@ -54,15 +54,20 @@
           "
           >{{ store.Permissions.Privat ? "Privat" : "Set Privat" }}</span
         >
-       
       </div>
 
-      <div class=" flex items-start flex-col  pt-10 space-y-4">
-        <span class=" text-xl text-primary-black font-bold font-Inter">External Content Creators</span>
-         <div class="flex flex-col items-start -space-y-2">
+      <div class="flex items-start flex-col pt-10 space-y-4">
+        <span class="text-xl text-primary-black font-bold font-Inter"
+          >External Content Creators</span
+        >
+        <div class="flex flex-col items-start -space-y-2">
           <div class="flex items-center -space-x-10 -space-y-4">
-            <label class="control control-checkbox ">
-              <input type="checkbox" v-model="store.Permissions.permissions"  value="Can work on this project"/>
+            <label class="control control-checkbox">
+              <input
+                type="checkbox"
+                v-model="store.Permissions.permissions"
+                value="Can work on this project"
+              />
               <div class="control_indicator"></div>
             </label>
             <span
@@ -73,9 +78,13 @@
               >Can work on this project</span
             >
           </div>
-           <div class="flex items-center -space-x-10 -space-y-4">
-            <label class="control control-checkbox ">
-              <input type="checkbox"  v-model="store.Permissions.permissions"  value="Can deploy to my company" />
+          <div class="flex items-center -space-x-10 -space-y-4">
+            <label class="control control-checkbox">
+              <input
+                type="checkbox"
+                v-model="store.Permissions.permissions"
+                value="Can deploy to my company"
+              />
               <div class="control_indicator"></div>
             </label>
             <span
@@ -86,9 +95,13 @@
               >Can deploy to my company</span
             >
           </div>
-           <div class="flex items-center -space-x-10 -space-y-4">
-            <label class="control control-checkbox ">
-              <input type="checkbox" v-model="store.Permissions.permissions"  value="Can copy elements from my project"/>
+          <div class="flex items-center -space-x-10 -space-y-4">
+            <label class="control control-checkbox">
+              <input
+                type="checkbox"
+                v-model="store.Permissions.permissions"
+                value="Can copy elements from my project"
+              />
               <div class="control_indicator"></div>
             </label>
             <span
@@ -99,9 +112,13 @@
               >Can copy elements from my project</span
             >
           </div>
-           <div class="flex items-center -space-x-10 -space-y-4">
-            <label class="control control-checkbox ">
-              <input type="checkbox" v-model="store.Permissions.permissions"  value="Can manage my project" />
+          <div class="flex items-center -space-x-10 -space-y-4">
+            <label class="control control-checkbox">
+              <input
+                type="checkbox"
+                v-model="store.Permissions.permissions"
+                value="Can manage my project"
+              />
               <div class="control_indicator"></div>
             </label>
             <span
@@ -112,8 +129,6 @@
               >Can manage my project</span
             >
           </div>
-         
-        
         </div>
       </div>
     </div>
@@ -209,7 +224,7 @@ input[type="checkbox"] {
   height: 28px;
   -webkit-appearance: none;
   -webkit-appearance: none;
-  background: #DEDEE3;
+  background: #dedee3;
   outline: none;
   cursor: pointer;
   border-radius: 20px;
@@ -223,7 +238,7 @@ input[type="checkbox"]::before {
   top: 4px;
   left: 4px;
   border-radius: 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   transform: scale(1.1);
   transition: left 300ms linear;
 }

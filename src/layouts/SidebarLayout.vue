@@ -9,7 +9,8 @@
               flex flex-col flex-grow
               pt-5
               bg-quaternary-gray
-              overflow-y-auto border-0 border-r-2 border-secondary-gray
+              overflow-y-auto
+              border-0 border-r-2 border-secondary-gray
             "
           >
             <div class="mt-5 flex-1 flex flex-col">
@@ -22,7 +23,7 @@
         <!-- content -->
         <div class="md:pl-64 flex flex-col flex-1">
           <main>
-           <slot name="content"></slot>
+            <slot name="content"></slot>
           </main>
         </div>
       </div>

@@ -14,18 +14,20 @@
           >
         </div>
       </div>
-      <div class="max-w-7xl m-auto w-full grid grid-cols-2 gap-x-48 gap-y-14 pt-20">
+      <div
+        class="max-w-7xl m-auto w-full grid grid-cols-2 gap-x-48 gap-y-14 pt-20"
+      >
         <div class="w-full">
           <LatestProductCard />
         </div>
         <div class="w-full">
           <ManageCard />
         </div>
-        <div class=" w-full">
+        <div class="w-full">
           <LatestProjectsCard />
         </div>
 
-        <div class=" w-full pt-16">
+        <div class="w-full pt-16">
           <HelpReferencesCard />
         </div>
       </div>

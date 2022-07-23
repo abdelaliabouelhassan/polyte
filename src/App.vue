@@ -1,17 +1,5 @@
 <template>
-
-  <div class=" w-full">
+  <div class="w-full">
     <router-view></router-view>
   </div>
- 
 </template>
-
-
-<script setup>
-
-</script>
-
-
-<style>
-
-</style>

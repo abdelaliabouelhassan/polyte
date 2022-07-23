@@ -1,16 +1,18 @@
 <template>
- <div class=" w-full flex flex-col items-start space-y-4">
-    <span class=" text-3xl font-bold text-primary-black font-Inter">Operating System</span>
-     <div class="w-full bg-white rounded-2xl p-5 input-border text-opacity-80">
-    <apexchart
-      class="w-full"
-      height="265"
-      type="donut"
-      :options="chartOptions"
-      :series="series"
-    ></apexchart>
+  <div class="w-full flex flex-col items-start space-y-4">
+    <span class="text-3xl font-bold text-primary-black font-Inter"
+      >Operating System</span
+    >
+    <div class="w-full bg-white rounded-2xl p-5 input-border text-opacity-80">
+      <apexchart
+        class="w-full"
+        height="265"
+        type="donut"
+        :options="chartOptions"
+        :series="series"
+      ></apexchart>
+    </div>
   </div>
- </div>
 </template>
 
 
@@ -32,10 +34,10 @@ export default {
             return [name, val.toFixed(1) + "%"];
           },
         },
-        
+
         stroke: {
           width: 0,
-           curve: "smooth",
+          curve: "smooth",
         },
         plotOptions: {
           pie: {

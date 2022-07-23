@@ -1,7 +1,9 @@
 <template>
   <div class="w-full flex flex-col items-start space-y-4 font-Inter">
     <div class="flex justify-between items-center w-full">
-      <span class="text-primary-black font-bold text-3xl">Accessing Polyte-Player Functions:</span>
+      <span class="text-primary-black font-bold text-3xl"
+        >Accessing Polyte-Player Functions:</span
+      >
       <button
         class="
           text-primary-black text-xl
@@ -16,9 +18,9 @@
         Visit Documentation
       </button>
     </div>
-  <div class="w-full bg-white rounded-2xl input-border p-5 flex relative">
+    <div class="w-full bg-white rounded-2xl input-border p-5 flex relative">
       <button
-       @click="copyCode"
+        @click="copyCode"
         class="
           text-xl
           font-normal
@@ -30,7 +32,10 @@
           px-4
           rounded-md
           focus:ring-2
-          ring-secondary-gray absolute right-4 top-2.5
+          ring-secondary-gray
+          absolute
+          right-4
+          top-2.5
         "
       >
         <svg
@@ -47,22 +52,17 @@
           />
         </svg>
       </button>
-      <highlightjs
-        language="js"
-        :code="'<script>' + code  +' \n</script>'"
-    />
+      <highlightjs language="js" :code="'<script>' + code + ' \n</script>'" />
     </div>
   </div>
 </template>
 
 
 <script>
-
-
 export default {
-  data(){
+  data() {
     return {
-        code:`
+      code: `
         function setCamera(val)
          {
              var player = document.querySelector(„polyte-player“);
@@ -71,24 +71,20 @@ export default {
               function setVariant(valArray) 
               { var player = document.querySelector(„polyte-player“);
                player.setVariant(valArray); 
-          } `
-    }
+          } `,
+    };
   },
-   methods:{
-    copyCode(){
-        var code = this.code;
-        var textArea = document.createElement("textarea");
-        textArea.value = code;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        textArea.remove();
-    
-    }
-   },
-  
-   
-    
+  methods: {
+    copyCode() {
+      var code = this.code;
+      var textArea = document.createElement("textarea");
+      textArea.value = code;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      textArea.remove();
+    },
+  },
 };
 </script>
 

@@ -1,7 +1,8 @@
 <template>
   <div
     class="
-      fixed z-40
+      fixed
+      z-40
       w-full
       bg-white
       px-10
@@ -77,13 +78,18 @@ export default {
         name: "Overview",
         pathname: "overview",
         active: false,
-        children: ['home'],
+        children: ["home"],
       },
       {
         name: "Manage Content",
         pathname: "manage-contents-Products",
         active: false,
-        children: ['manage-contents-overview','manage-contents-variant-options','manage-contents-camera-views','manage-contents-integrateion'],
+        children: [
+          "manage-contents-overview",
+          "manage-contents-variant-options",
+          "manage-contents-camera-views",
+          "manage-contents-integrateion",
+        ],
       },
       {
         name: "Manage Projects",
@@ -97,17 +103,16 @@ export default {
       },
       {
         name: "Settings",
-        pathname: "settings",
+        pathname: "app-settings-overview",
         active: false,
-        children: [],
+        children: ['app-settings-manage-users', 'app-settings-manage-roles', 'app-settings-subscription', 'app-settings-billing', 'app-settings-manage-companies', 'app-settings-manage-licences'],
       },
     ]);
     const SetActive = (link) => {
-      
       links.value.forEach((item) => {
         item.active = false;
       });
-    link.active = true;
+      link.active = true;
       GoTo(link.pathname);
     };
     const GoTo = (pathname) => {

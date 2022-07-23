@@ -31,7 +31,7 @@
             text-xl text-primary-black text-opacity-40
             font-bold font-Inter
           "
-          >{{store.NewProject.name}}</span
+          >{{ store.NewProject.name }}</span
         >
         <span class="text-xl font-bold text-primary-black font-Inter"
           >Project Briefing</span

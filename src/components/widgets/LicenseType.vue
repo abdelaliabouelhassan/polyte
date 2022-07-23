@@ -9,7 +9,16 @@
       >
     </div>
     <div
-      class="w-full rounded-2xl bg-white py-6 px-4 flex justify-between items-center"
+      class="
+        w-full
+        rounded-2xl
+        bg-white
+        py-6
+        px-4
+        flex
+        justify-between
+        items-center
+      "
     >
       <div class="flex items-center space-x-4">
         <div>
@@ -72,9 +81,19 @@
             </g>
           </svg>
         </div>
-        <span class=" text-xl font-bold font-Inter text-primary-black text-opacity-80">Polyte Business</span>
+        <span
+          class="
+            text-xl
+            font-bold font-Inter
+            text-primary-black text-opacity-80
+          "
+          >Polyte Business</span
+        >
       </div>
-      <span class=" text-primary-black text-opacity-80 text-xl font-light font-Inter">2023-08-27</span>
+      <span
+        class="text-primary-black text-opacity-80 text-xl font-light font-Inter"
+        >2023-08-27</span
+      >
     </div>
   </div>
 </template>

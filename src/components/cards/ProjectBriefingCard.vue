@@ -344,18 +344,17 @@
 
 <script>
 export default {
-    data(){
-        return {
-            content:'',
-        }
-    },
+  data() {
+    return {
+      content: "",
+    };
+  },
 };
 </script>
 
 
 <style scoped>
-textarea
-{
-   resize: none;
+textarea {
+  resize: none;
 }
 </style>

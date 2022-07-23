@@ -91,7 +91,7 @@ export default {
     IconAnimations,
     IconVariant,
     IconTextures,
-    IconMaterials
+    IconMaterials,
   },
 };
 </script>

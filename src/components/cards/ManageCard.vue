@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col items-start space-y-16 font-Inter">
+  <div class="w-full flex flex-col items-start space-y-16 font-Inter">
     <div class="flex justify-between items-center w-full">
       <span class="text-primary-black font-bold text-3xl">Berghain GmbH</span>
       <button
@@ -9,29 +9,30 @@
           py-2
           px-4
           rounded-md
-          bg-primary-gray hover:bg-gray-300 
+          bg-primary-gray
+          hover:bg-gray-300
         "
       >
         Manage
       </button>
     </div>
-    <div class=" flex flex-col items-start space-y-10 w-full">
-        <LicenseType />
-        <Impressions />
-        <Storage />
+    <div class="flex flex-col items-start space-y-10 w-full">
+      <LicenseType />
+      <Impressions />
+      <Storage />
     </div>
   </div>
 </template>
 
 <script>
-import LicenseType from "../widgets/LicenseType.vue"
-import Impressions from "../widgets/Impressions.vue"
-import Storage from "../widgets/Storage.vue"
+import LicenseType from "../widgets/LicenseType.vue";
+import Impressions from "../widgets/Impressions.vue";
+import Storage from "../widgets/Storage.vue";
 export default {
-    components: {
-        LicenseType,
-        Impressions,
-        Storage,
-    },
-}
+  components: {
+    LicenseType,
+    Impressions,
+    Storage,
+  },
+};
 </script>

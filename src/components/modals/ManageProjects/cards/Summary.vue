@@ -38,38 +38,92 @@
         >
       </div>
     </div>
-    <div class=" w-full flex flex-col items-start space-y-10">
-        <div class=" flex flex-col items-start space-y-5 w-full">
-            <div class=" grid grid-cols-3 gap-5 w-full">
-                <span class=" text-xl text-primary-black font-bold font-Inter">Name</span>
-                <span class=" text-xl text-primary-black font-normal  font-Inter text-opacity-60 col-span-2">{{store.NewProject.name}}</span>
-            </div>
-             <div class=" grid grid-cols-3 gap-5 w-full">
-                <span class=" text-xl text-primary-black font-bold font-Inter">Briefing</span>
-                <span class=" text-xl text-primary-black font-normal  font-Inter text-opacity-60 col-span-2">{{store.ProjectBriefing.content}}</span>
-            </div>
+    <div class="w-full flex flex-col items-start space-y-10">
+      <div class="flex flex-col items-start space-y-5 w-full">
+        <div class="grid grid-cols-3 gap-5 w-full">
+          <span class="text-xl text-primary-black font-bold font-Inter"
+            >Name</span
+          >
+          <span
+            class="
+              text-xl text-primary-black
+              font-normal font-Inter
+              text-opacity-60
+              col-span-2
+            "
+            >{{ store.NewProject.name }}</span
+          >
         </div>
-         <div class=" flex flex-col items-start space-y-5 w-full">
-            <div class=" grid grid-cols-3 gap-5 w-full">
-                <span class=" text-xl text-primary-black font-bold font-Inter">External</span>
-                <span class=" text-xl text-primary-black font-normal  font-Inter text-opacity-60 col-span-2">{{store.InviteContent.email}}</span>
-            </div>
-             <div class=" grid grid-cols-3 gap-5 w-full">
-                <span class=" text-xl text-primary-black font-bold font-Inter">Visible</span>
-                <span class=" text-xl text-primary-black font-normal  font-Inter text-opacity-60 col-span-2">{{store.Permissions.Privat ? "This Project can't be seen by my team mates" : "This Project can be seen by my team mates"}} </span>
-            </div>
-                <div class=" grid grid-cols-3 gap-5 w-full">
-                <span class=" text-xl text-primary-black font-bold font-Inter">Permissions</span>
-                <span class=" text-xl text-primary-black font-normal  font-Inter text-opacity-60 col-span-2">{{store.Permissions.permissions.length}} Permissions set</span>
-            </div>
+        <div class="grid grid-cols-3 gap-5 w-full">
+          <span class="text-xl text-primary-black font-bold font-Inter"
+            >Briefing</span
+          >
+          <span
+            class="
+              text-xl text-primary-black
+              font-normal font-Inter
+              text-opacity-60
+              col-span-2
+            "
+            >{{ store.ProjectBriefing.content }}</span
+          >
         </div>
+      </div>
+      <div class="flex flex-col items-start space-y-5 w-full">
+        <div class="grid grid-cols-3 gap-5 w-full">
+          <span class="text-xl text-primary-black font-bold font-Inter"
+            >External</span
+          >
+          <span
+            class="
+              text-xl text-primary-black
+              font-normal font-Inter
+              text-opacity-60
+              col-span-2
+            "
+            >{{ store.InviteContent.email }}</span
+          >
+        </div>
+        <div class="grid grid-cols-3 gap-5 w-full">
+          <span class="text-xl text-primary-black font-bold font-Inter"
+            >Visible</span
+          >
+          <span
+            class="
+              text-xl text-primary-black
+              font-normal font-Inter
+              text-opacity-60
+              col-span-2
+            "
+            >{{
+              store.Permissions.Privat
+                ? "This Project can't be seen by my team mates"
+                : "This Project can be seen by my team mates"
+            }}
+          </span>
+        </div>
+        <div class="grid grid-cols-3 gap-5 w-full">
+          <span class="text-xl text-primary-black font-bold font-Inter"
+            >Permissions</span
+          >
+          <span
+            class="
+              text-xl text-primary-black
+              font-normal font-Inter
+              text-opacity-60
+              col-span-2
+            "
+            >{{ store.Permissions.permissions.length }} Permissions set</span
+          >
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 
 <script>
-import { ref } from '@vue/reactivity';
+import { ref } from "@vue/reactivity";
 import IconProject from "../../../../Icons/IconProject.vue";
 import { useStore } from "../../../../stores/NewProjectStore.js";
 

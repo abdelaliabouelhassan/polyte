@@ -17,7 +17,9 @@
         All functions
       </button>
     </div>
-    <div class="w-full bg-white rounded-2xl input-border h-[313px] flex relative">
+    <div
+      class="w-full bg-white rounded-2xl input-border h-[313px] flex relative"
+    >
       <div class="m-auto">
         <img
           src="https://polyte-app.herokuapp.com/transparent-baby.png"
@@ -26,7 +28,7 @@
         />
       </div>
 
-      <div class=" absolute bottom-2 left-4">
+      <div class="absolute bottom-2 left-4">
         <svg
           id="Group_2"
           data-name="Group 2"

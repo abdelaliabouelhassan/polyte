@@ -62,7 +62,8 @@
           border-tertiary-gray
           rounded-b-lg
           overflow-hidden
-          border-t-0 border border-[#00132410] relative
+          border-t-0 border border-[#00132410]
+          relative
         "
       >
         <input
@@ -111,10 +112,8 @@ export default {
   setup() {
     const router = useRouter();
     const route = useRoute();
-   
 
-    return {
-    };
+    return {};
   },
 };
 </script>

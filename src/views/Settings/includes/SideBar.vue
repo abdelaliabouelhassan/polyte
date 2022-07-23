@@ -1,26 +1,9 @@
 <template>
   <div class="w-full flex flex-col items-start space-y-10 px-5 font-Inter">
     <div class="w-full pl-4 space-y-8">
-      <button
-        @click="goBack"
-        class="
-          text-xl
-          font-normal
-          text-primary-black
-          hover:bg-white
-          py-2
-          px-4
-          w-full
-          text-left
-          rounded-lg
-        "
-      >
-        All Products
-      </button>
-
-      <div class="w-full flex flex-col items-start space-y-4">
+      <div class="w-full flex flex-col items-start space-y-4 pt-10 pl-4">
         <span class="text-3xl text-primary-black font-bold font-Inter text-left"
-          >Angelcab Stroller</span
+          >Settings</span
         >
       </div>
       <div class="flex flex-col items-start space-y-2">
@@ -60,21 +43,33 @@ export default {
     const List = ref([
       {
         name: "Overview",
-        pathname: "manage-contents-overview",
+        pathname: "app-settings-overview",
         active: false,
       },
       {
-        name: "Variant Options",
-        pathname: "manage-contents-variant-options",
+        name: "Manage Users",
+        pathname: "app-settings-manage-users",
         active: false,
       },
       {
-        name: "Camera Views",
-        pathname: "manage-contents-camera-views",
+        name: "Manage Roles",
+        pathname: "app-settings-manage-roles",
       },
       {
-        name: "Integrateion",
-        pathname: "manage-contents-integrateion",
+        name: "Subscription",
+        pathname: "app-settings-subscription",
+      },
+      {
+        name: "Billing",
+        pathname: "app-settings-billing",
+      },
+      {
+        name: "Manage Companies",
+        pathname: "app-settings-manage-companies",
+      },
+      {
+        name: "Manage Licences",
+        pathname: "app-settings-manage-licences",
       },
     ]);
     const SetActive = (item) => {

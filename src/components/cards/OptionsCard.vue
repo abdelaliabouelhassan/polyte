@@ -47,7 +47,7 @@
         <div class="absolute top-3 left-4">
           <IconSearch />
         </div>
-        <div class=" absolute right-4 top-3">
+        <div class="absolute right-4 top-3">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,11 +68,24 @@
         </div>
       </div>
 
-      <div class="w-full p-5 flex flex-col items-start space-y-2 max-h-[700px] h-full overflow-y-auto">
+      <div
+        class="
+          w-full
+          p-5
+          flex flex-col
+          items-start
+          space-y-2
+          max-h-[700px]
+          h-full
+          overflow-y-auto
+        "
+      >
         <div
-         v-for="(item,index,key) in Options" :key="key"
+          v-for="(item, index, key) in Options"
+          :key="key"
           class="
-            w-full cursor-pointer
+            w-full
+            cursor-pointer
             flex
             items-center
             justify-between
@@ -81,10 +94,16 @@
             py-2
             px-4
           "
-          :class="{'bg-primary-blue':item.active}"
+          :class="{ 'bg-primary-blue': item.active }"
         >
-          <span @click="change(index)" class="text-xl  font-normal font-Inter hover:text-white" :class="{'text-white':item.active,'text-primary-black':!item.active}"
-            >{{item.name}}</span
+          <span
+            @click="change(index)"
+            class="text-xl font-normal font-Inter hover:text-white"
+            :class="{
+              'text-white': item.active,
+              'text-primary-black': !item.active,
+            }"
+            >{{ item.name }}</span
           >
           <div class="flex items-center space-x-2" v-if="item.active">
             <button
@@ -144,7 +163,7 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity';
+import { ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
 import IconSearch from "../../Icons/IconSearch.vue";
 export default {
@@ -152,83 +171,83 @@ export default {
     const router = useRouter();
     const route = useRoute();
     const Options = ref([
-        {
-            name:'Variant Option 298',
-            active:true,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        },
-        {
-            name:'Variant Option 298',
-            active:false,
-        }
+      {
+        name: "Variant Option 298",
+        active: true,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
+      {
+        name: "Variant Option 298",
+        active: false,
+      },
     ]);
     const change = (index) => {
-        Options.value.forEach((item,i) => {
-            if(i === index){
-                item.active = true;
-            }else{
-                item.active = false;
-            }
-        });
-    }
+      Options.value.forEach((item, i) => {
+        if (i === index) {
+          item.active = true;
+        } else {
+          item.active = false;
+        }
+      });
+    };
     return {
-        Options,
-        change
+      Options,
+      change,
     };
   },
   components: {
