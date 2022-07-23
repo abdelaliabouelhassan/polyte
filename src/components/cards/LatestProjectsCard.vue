@@ -25,9 +25,10 @@
           class="flex flex-col items-center space-y-2  "
           v-for="(project, index, key) in projects"
           :key="key"
-          @click="goToProject(project)"
+         
         >
           <div
+           @click="goToProject(project)"
             class="w-[110px] h-[90px] rounded-xl overflow-hidden cursor-pointer hover:bg-secondary-gray"
             :style="{ border: '6px solid ' + project.color + '36' }"
           >
