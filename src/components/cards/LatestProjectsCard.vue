@@ -22,13 +22,13 @@
     >
       <div class="grid grid-cols-2 gap-10 p-6">
         <div
-          class="flex flex-col items-center space-y-2"
+          class="flex flex-col items-center space-y-2  "
           v-for="(project, index, key) in projects"
           :key="key"
           @click="goToProject(project)"
         >
           <div
-            class="w-[110px] h-[90px] rounded-xl overflow-hidden cursor-pointer"
+            class="w-[110px] h-[90px] rounded-xl overflow-hidden cursor-pointer hover:bg-secondary-gray"
             :style="{ border: '6px solid ' + project.color + '36' }"
           >
             <div
@@ -49,7 +49,7 @@
             <span class="font-normal font-Inter text-xl text-primary-black">{{
               project.name
             }}</span>
-            <div class="flex -space-x-1 overflow-hidden">
+            <div class="flex -space-x-1">
               <img
                 v-for="(user, userindex, userkey) in project.users"
                 :key="userkey"
@@ -59,7 +59,7 @@
                   w-6
                   rounded-full
                   ring-2 ring-white
-                  bg-[#DBDBDB]
+                  bg-[#DBDBDB]  hover:scale-125 ease-in-out duration-300 delay-150 hover:z-50
                 "
                 :src="user.image"
                 alt=""

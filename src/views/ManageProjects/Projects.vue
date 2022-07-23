@@ -201,7 +201,7 @@
               <span class="font-normal font-Inter text-xl text-primary-black">{{
                 project.name
               }}</span>
-              <div class="flex -space-x-1 overflow-hidden">
+              <div class="flex -space-x-1 ">
                 <img
                   v-for="(user, userindex, userkey) in project.users"
                   :key="userkey"
@@ -211,7 +211,7 @@
                     w-6
                     rounded-full
                     ring-2 ring-white
-                    bg-[#DBDBDB]
+                    bg-[#DBDBDB]   hover:scale-125 ease-in-out duration-300 delay-150 hover:z-50
                   "
                   :src="user.image"
                   alt=""
