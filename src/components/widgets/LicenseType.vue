@@ -1,6 +1,9 @@
 <template>
   <div class="w-full flex flex-col items-start space-y-2 font-Inter">
-    <div class="w-full flex justify-between items-center pr-4">
+    <div
+      class="w-full flex justify-between items-center pr-4"
+      :class="{ 'pr-32': manage }"
+    >
       <span class="text-primary-black text-xl font-light font-Inter"
         >License type</span
       >
@@ -90,10 +93,56 @@
           >Polyte Business</span
         >
       </div>
-      <span
-        class="text-primary-black text-opacity-80 text-xl font-light font-Inter"
-        >2023-08-27</span
-      >
+      <div class="flex items-center space-x-4">
+        <span
+          class="
+            text-primary-black text-opacity-80 text-xl
+            font-light font-Inter
+          "
+          >2023-08-27</span
+        >
+        <button
+          v-if="manage"
+          @click="goToSub"
+          class="
+            text-primary-black text-base
+            font-normal
+            py-2
+            px-4
+            rounded-md
+            bg-primary-gray
+            hover:bg-gray-300
+          "
+        >
+          Manage
+        </button>
+      </div>
     </div>
   </div>
 </template>
+
+
+<script>
+import { useRouter, useRoute } from "vue-router";
+
+export default {
+  setup() {
+    const router = useRouter();
+    const route = useRoute();
+    const goToSub = () => {
+      router.push({
+        name: "app-settings-subscription",
+      });
+    };
+    return {
+      goToSub,
+    };
+  },
+  props: {
+    manage: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
+</script>

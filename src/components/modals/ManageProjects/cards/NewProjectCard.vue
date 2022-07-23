@@ -43,16 +43,17 @@
             name="Name"
             id="Name"
             class="
-              w-full
               bg-white
               px-4
               py-2
               rounded-xl
+              border-[3px] border-secondary-gray
               outline-none
-              input-ring
-              text-xl
+              focus:border-secondary-blue
+              text-bases
               placeholder-primary-black placeholder-opacity-50
               font-light font-Inter
+              w-full
             "
             placeholder="Enter Project Name"
           />

@@ -39,6 +39,24 @@
       <div class="w-full bg-quinary-gray rounded-full overflow-hidden h-3">
         <div class="w-40 bg-primary-blue h-full"></div>
       </div>
+
+
+      <div class=" flex flex-col items-start space-y-2 pt-2" v-if="showMessage">
+        <span class=" font-bold text-xl text-primary-black">You have used 24% of your storage</span>
+        <span class=" font-light text-xl text-primary-black text-opacity-50">The storage relates to both products and editor projects</span>
+      </div>
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  props:{
+    showMessage:{
+      type:Boolean,
+      default:false
+    }
+  }
+}
+</script>

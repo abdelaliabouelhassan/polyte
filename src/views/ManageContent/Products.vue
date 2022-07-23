@@ -31,12 +31,12 @@
                 />
               </div>
               <button
-                class="h-[46px] w-[56px] rounded-lg bg-white flex input-border"
+                class="h-[46px] w-[56px] rounded-lg bg-white flex input-border hover:bg-opacity-60"
               >
                 <FilterIcon class="m-auto" />
               </button>
               <button
-                class="h-[46px] w-[56px] rounded-lg bg-white flex input-border"
+                class="h-[46px] w-[56px] rounded-lg bg-white flex input-border hover:bg-opacity-60"
               >
                 <SelectIcon class="m-auto" />
               </button>
