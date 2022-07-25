@@ -82,6 +82,7 @@
         "
       >
         <button
+         @click="openModal"
           class="
             flex
             w-full
@@ -116,6 +117,7 @@
         </button>
       </div>
     </div>
+    <NewProjectModal ref="newProject" />
   </div>
 </template>
 
@@ -124,15 +126,21 @@
 import { ref } from "@vue/reactivity";
 import IconProject from "../../Icons/IconProject.vue";
 import IconStar from "../../Icons/IconStar.vue";
+import NewProjectModal from "../modals/ManageProjects/NewProjectModal.vue";
 import { useRouter } from "vue-router";
 
 export default {
   components: {
     IconProject,
     IconStar,
+    NewProjectModal
   },
   setup() {
     const router = useRouter();
+    const newProject = ref(false)
+    const openModal = ()  =>{
+      newProject.value.OpenModal();
+    }
     const projects = ref([
       {
         name: "Adidas Sport Shoe",
@@ -217,6 +225,8 @@ export default {
       projects,
       AllProjects,
       goToProject,
+      newProject,
+      openModal
     };
   },
 };

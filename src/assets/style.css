@@ -57,6 +57,7 @@
 }
 
 .apexcharts-legend {
-  padding-top: 29px !important;
+  /* padding-top: 29px !important; */
   padding-right: 49px !important;
+  overflow: hidden !important;
 }

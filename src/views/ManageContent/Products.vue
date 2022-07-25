@@ -9,7 +9,7 @@
             <span class="text-3xl font-bold text-primary-black">Products</span>
             <div class="flex items-center space-x-4 max-w-xl w-full">
               <div class="max-w-[540px] w-full h-[46px] relative">
-                <div class="absolute left-4 top-4">
+                <div class="absolute left-4 top-5">
                   <IconSearch />
                 </div>
                 <input
@@ -20,7 +20,7 @@
                     rounded-lg
                     bg-white
                     outline-none
-                    pl-10
+                    pl-12
                     px-4
                     placeholder-opacity-25 placeholder-primary-black
                     text-xl

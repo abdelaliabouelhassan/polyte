@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col items-start space-y-4">
+  <div class="w-full flex flex-col items-start space-y-4 overflow-hidden">
     <span class="text-3xl font-bold text-primary-black font-Inter"
       >Operating System</span
     >
@@ -48,9 +48,7 @@ export default {
         dataLabels: {
           enabled: false,
         },
-        fill: {
-          type: "gradient",
-        },
+      
         legend: {
           formatter: function (val, opts) {
             return (

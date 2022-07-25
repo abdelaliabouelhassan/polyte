@@ -95,7 +95,7 @@
           <span class="text-3xl font-bold text-primary-black">Projects</span>
           <div class="flex items-center space-x-4 max-w-xl w-full">
             <div class="max-w-[540px] w-full h-[46px] relative">
-              <div class="absolute left-4 top-4">
+              <div class="absolute left-4 top-5">
                 <IconSearch />
               </div>
               <input
@@ -106,7 +106,7 @@
                   rounded-lg
                   bg-white
                   outline-none
-                  pl-10
+                  pl-12
                   px-4
                   placeholder-opacity-25 placeholder-primary-black
                   text-xl
@@ -117,24 +117,24 @@
               />
             </div>
             <button
-              class="h-[46px] w-[56px] rounded-lg bg-white flex input-border"
+              class="h-[46px] w-[56px] rounded-lg bg-white flex input-border hover:bg-opacity-60"
             >
               <FilterIcon class="m-auto" />
             </button>
             <button
-              class="h-[46px] w-[56px] rounded-lg bg-white flex input-border"
+              class="h-[46px] w-[56px] rounded-lg bg-white flex input-border  hover:bg-opacity-60"
             >
               <SelectIcon class="m-auto" />
             </button>
             <button
-              class="h-[46px] w-[56px] rounded-lg bg-white flex input-border"
+              class="h-[46px] w-[56px] rounded-lg bg-white flex input-border  hover:bg-opacity-60"
             >
               <IconBlackStart class="m-auto" />
             </button>
           </div>
         </div>
 
-        <div class="w-full grid grid-cols-4 gap-10">
+        <div class="w-full grid sm:grid-cols-3 grid-cols-2 lg:grid-cols-4 gap-10">
           <div
             class="
               flex flex-col

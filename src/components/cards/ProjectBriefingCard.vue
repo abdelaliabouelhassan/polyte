@@ -27,13 +27,13 @@
         class="
           w-full
           border-0 border-t-4 border-tertiary-gray
-          p-5
+          md:p-2.5 p-3
           flex
           items-center
-          space-x-16
+          space-x-10
         "
       >
-        <div class="flex items-center space-x-8">
+        <div class="flex items-center space-x-8 ">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"

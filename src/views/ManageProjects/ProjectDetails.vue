@@ -4,7 +4,18 @@
       <SideBar />
     </template>
     <template v-slot:content>
-      <div class="py-10 max-w-7xl m-auto px-4 pl-8 space-y-24">
+      <div
+        class="
+          py-10
+          pt-28
+          md:pt-14
+          w-full
+          xl:max-w-7xl xl:m-auto
+          px-4
+          pl-8
+          space-y-24
+        "
+      >
         <div class="w-full space-y-2">
           <div class="w-full flex justify-between items-center">
             <div></div>
@@ -22,7 +33,17 @@
               </div>
             </div>
           </div>
-          <div class="w-full flex justify-between items-center">
+          <div
+            class="
+              w-full
+              flex
+              md:flex-row
+              flex-col
+              items-start
+              space-y-4
+              md:space-y-0 md:justify-between md:items-center
+            "
+          >
             <div
               class="flex items-center space-x-4 relative"
               @mouseover="show = true"
@@ -114,20 +135,57 @@
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col items-start space-y-1">
-                <span class="text-3xl font-bold text-primary-black font-Inter"
-                  >Adidas Sport Shoe</span
+              <div class="flex items-start space-x-2 group">
+                <div class="flex flex-col items-start space-y-1">
+                  <span
+                    class="text-3xl font-bold text-primary-black font-Inter"
+                    v-if="!EditTitle"
+                    >{{ title }}</span
+                  >
+                  <input
+                    v-else
+                    v-model="title"
+                    type="text"
+                    class="
+                      text-3xl
+                      font-bold
+                      text-primary-black
+                      font-Inter
+                      py-2
+                      outline-none
+                      bg-tertiary-gray
+                    "
+                  />
+                  <span
+                    class="
+                      text-xl
+                      font-normal
+                      text-primary-black
+                      font-Inter
+                      text-opacity-50
+                    "
+                    >Created 2022-07-25</span
+                  >
+                </div>
+                <div
+                  class="hidden group-hover:block cursor-pointer" :class="{'block':EditTitle}"
+                  @click="EditTitle = !EditTitle"
                 >
-                <span
-                  class="
-                    text-xl
-                    font-normal
-                    text-primary-black
-                    font-Inter
-                    text-opacity-50
-                  "
-                  >Created 2022-07-25</span
-                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20.653"
+                    height="20.652"
+                    viewBox="0 0 25.653 25.652"
+                  >
+                    <path
+                      id="Path_35"
+                      data-name="Path 35"
+                      d="M24.629,4.485,21.166,1.023a3.5,3.5,0,0,0-4.947,0L.74,16.5A2.509,2.509,0,0,0,0,18.288v4.836a2.531,2.531,0,0,0,2.528,2.528H7.364a2.509,2.509,0,0,0,1.786-.74L24.629,9.432a3.5,3.5,0,0,0,0-4.947M7.362,23.123H2.528V18.29L14.272,6.545l4.834,4.834ZM22.841,7.645,20.894,9.591,16.06,4.758l1.947-1.947a.971.971,0,0,1,1.371,0l3.463,3.463a.97.97,0,0,1,0,1.371m-8.609,5.563L8.774,18.666a1.264,1.264,0,0,1-1.788-1.788l5.458-5.458a1.264,1.264,0,0,1,1.788,1.788"
+                      fill="#001324"
+                      opacity="0.53"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <button
@@ -144,11 +202,11 @@
                 rounded-md
                 text-white
                 bg-primary-black
-                hover:bg-primary-blue
+                hover:bg-opacity-60
                 focus:outline-none
                 focus:ring-2
                 focus:ring-offset-2
-                focus:ring-primary-blue
+                focus:ring-primary-black
               "
             >
               <div class="m-auto flex items-center space-x-2">
@@ -171,7 +229,15 @@
               </div>
             </button>
           </div>
-          <div class="w-full grid grid-cols-2 gap-x-20 gap-y-2 pt-20">
+          <div
+            class="
+              w-full
+              grid grid-cols-1
+              lg:grid-cols-2
+              gap-x-20 gap-y-2
+              pt-20
+            "
+          >
             <div>
               <ProjectBriefingCard />
             </div>
@@ -327,6 +393,8 @@ export default {
     const router = useRouter();
     const route = useRoute();
     const show = ref(false);
+    const title = ref("Adidas Sport Shoe");
+    const EditTitle = ref(false);
     const Privat = ref(false);
     const ProjectColor = ref("#6482FF");
     const SelectColor = (color) => {
@@ -339,6 +407,8 @@ export default {
       SelectColor,
       show,
       ProjectColor,
+      EditTitle,
+      title,
     };
   },
 };

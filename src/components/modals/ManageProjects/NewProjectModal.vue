@@ -39,15 +39,15 @@
             shadow-xl
             transform
             transition-all
-            sm:w-full
+            w-full
             modal-border
-            max-w-5xl
+            max-w-7xl
           "
         >
-          <div class="w-full h-full flex items-start">
+          <div class="w-full h-full flex lg:flex-row flex-col items-start">
             <div
               class="
-                max-w-md
+                lg:max-w-md
                 w-full
                 bg-[#F4F6F8]
                 p-8
@@ -104,7 +104,7 @@
                 </div>
               </div>
             </div>
-            <div class="max-w-[490px] mx-auto w-full h-full py-8 relative">
+            <div class="lg:max-w-[490px] mx-auto w-full h-full py-8 relative px-8 lg:px-0 space-y-8 lg:space-y-0">
               <div class="w-full">
                 <NewProjectCard v-if="StepIndex == 0" />
                 <ProjectBriefingCard v-else-if="StepIndex == 1" />
@@ -115,12 +115,12 @@
               <div
                 class="
                   w-full
-                  max-w-[480px]
-                  fixed
+                  lg:max-w-[480px]
+                  lg:fixed
                   flex
                   justify-between
                   items-center
-                  bottom-4
+                  bottom-4 
                 "
               >
                 <div>

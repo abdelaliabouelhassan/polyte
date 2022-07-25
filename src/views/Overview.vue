@@ -15,7 +15,7 @@
         </div>
       </div>
       <div
-        class="max-w-7xl m-auto w-full grid grid-cols-2 gap-x-48 gap-y-14 pt-20"
+        class="max-w-7xl m-auto w-full grid md:grid-cols-2 gap-x-48 gap-y-14 pt-20"
       >
         <div class="w-full">
           <LatestProductCard />
