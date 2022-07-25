@@ -2,8 +2,8 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="60"
-    height="60"
+    :width="width"
+    :height="height"
     viewBox="0 0 60 60"
   >
     <defs>
@@ -62,6 +62,14 @@ export default {
     border:{
       type:String,
       default:'#C69800'
+    },
+    width:{
+      type:Number,
+      default:60
+    },
+    height:{
+      type:Number,
+      default:60
     }
   }
 }
