@@ -250,7 +250,7 @@
             </div>
           </div>
         </div>
-        <CreateNewUserModal ref="createModal" />
+        <CreateNewCompanyModal ref="createModal" />
       </div>
     </template>
   </SidebarLayout>
@@ -264,7 +264,7 @@ import FilterIcon from "../../Icons/FilterIcon.vue";
 import SelectIcon from "../../Icons/SelectIcon.vue";
 import IconFlag from "../../Icons/IconFlag.vue";
 import IconSub from "../../Icons/IconSub.vue";
-import CreateNewUserModal from "../../components/modals/Settings/CreateNewUserModal.vue";
+import CreateNewCompanyModal from "../../components/modals/Settings/CreateNewCompanyModal.vue";
 import { ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
 
@@ -276,7 +276,7 @@ export default {
     FilterIcon,
     SelectIcon,
     IconSub,
-    CreateNewUserModal,
+    CreateNewCompanyModal,
     IconFlag,
   },
   setup() {

@@ -297,7 +297,7 @@
             </div>
           </div>
         </div>
-        <CreateNewUserModal ref="createModal" />
+        <CreateNewLicenseModal ref="createModal" />
       </div>
     </template>
   </SidebarLayout>
@@ -310,7 +310,7 @@ import IconSearch from "../../Icons/IconSearch.vue";
 import FilterIcon from "../../Icons/FilterIcon.vue";
 import SelectIcon from "../../Icons/SelectIcon.vue";
 import IconSub from "../../Icons/IconSub.vue";
-import CreateNewUserModal from "../../components/modals/Settings/CreateNewUserModal.vue";
+import CreateNewLicenseModal from "../../components/modals/Settings/CreateNewLicenseModal.vue";
 import { ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
 
@@ -322,7 +322,7 @@ export default {
     FilterIcon,
     SelectIcon,
     IconSub,
-    CreateNewUserModal,
+    CreateNewLicenseModal,
   },
   setup() {
     const router = useRouter();

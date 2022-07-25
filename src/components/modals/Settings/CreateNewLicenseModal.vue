@@ -47,52 +47,56 @@
         >
           <div class="w-full flex flex-col items-start space-y-4">
             <div class="flex flex-col items-start space-y-4 w-full">
-              <div class="w-full flex justify-between items-center px-4">
-                <div class="flex flex-col items-start space-y-4">
-                  <div class="flex items-center space-x-2 w-full">
-                    <span
-                      class="font-bold font-Inter text-3xl text-primary-black"
-                      >Edit Role</span
-                    >
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <span
-                      class="
-                        text-xl
-                        font-light font-Inter
-                        text-primary-black text-opacity-50
-                      "
-                      >Company:</span
-                    >
-                    <select
-                      name=""
-                      id=""
-                      class="
-                        bg-white
-                        border-[3px] border-secondary-gray
-                        outline-none
-                        rounded-xl
-                        py-2
-                        px-2
-                        text-xl text-primary-black
-                        focus:border-secondary-blue
-                        font-bold
-                        w-full
-                      "
-                    >
-                      <option value="">Berghain GmbH</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="py-2 px-4 rounded-full" style="background: #fc8f83">
-                  <span
-                    class="text-xl font-bold text-primary-black text-opacity-80"
-                    >Manager</span
-                  >
-                </div>
+              <div class="flex items-center space-x-2">
+                <IconSub
+                  :width="48.35"
+                  :height="48.35"
+                  :maincolor="'#155188'"
+                  :border="'#001324'"
+                />
+                <span class="font-bold font-Inter text-3xl text-primary-black"
+                  >Create new Custom License</span
+                >
+              </div>
+              <div class="flex items-center space-x-2">
+                <span
+                  class="
+                    text-xl
+                    font-light font-Inter
+                    text-primary-black text-opacity-50
+                  "
+                  >Company:</span
+                >
+                <select
+                  name=""
+                  id=""
+                  class="
+                    bg-white
+                    border-[3px] border-secondary-gray
+                    outline-none
+                    rounded-xl
+                    py-2
+                    px-2
+                    text-xl text-primary-black
+                    focus:border-secondary-blue
+                    font-bold
+                    w-full
+                  "
+                >
+                  <option value="">Coniclabs GmbH</option>
+                </select>
               </div>
 
-              <div class="grid grid-cols-1 gap-10 w-full overflow-y-auto  max-h-[450px] px-4">
+              <div
+                class="
+                  grid grid-cols-2
+                  gap-10
+                  w-full
+                  overflow-y-auto
+                  max-h-[450px]
+                  px-4
+                "
+              >
                 <div class="m-auto w-full space-y-2">
                   <label
                     for="email"
@@ -103,33 +107,62 @@
                       text-primary-black
                       font-Inter
                     "
-                    >Role Name</label
+                    >Type</label
                   >
-                  <div class="mt-1 w-full">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      class="
-                        bg-white
-                        px-4
-                        py-2
-                        rounded-xl
-                        border-[3px] border-secondary-gray
-                        outline-none
-                        focus:border-secondary-blue
-                        text-bases
-                        placeholder-primary-black placeholder-opacity-50
-                        font-light font-Inter
-                        w-full
-                      "
-                      placeholder="Enter Role Name"
-                      aria-describedby="email-description"
-                    />
-                  </div>
+                  <div class="mt-1 w-full"></div>
+                  <select
+                    name=""
+                    id=""
+                    class="
+                      bg-white
+                      px-4
+                      py-2
+                      rounded-xl
+                      border-[3px] border-secondary-gray
+                      outline-none
+                      focus:border-secondary-blue
+                      text-bases
+                      placeholder-primary-black placeholder-opacity-50
+                      font-light font-Inter
+                      w-full
+                    "
+                  >
+                    <option value="">Coniclabs GmbH</option>
+                  </select>
+                </div>
+                <div class="m-auto w-full space-y-2">
+                  <label
+                    for="email"
+                    class="
+                      block
+                      text-xl
+                      font-bold
+                      text-primary-black
+                      font-Inter
+                    "
+                    >Name</label
+                  >
+                  <div class="mt-1 w-full"></div>
+                  <input
+                    type="text"
+                    class="
+                      bg-white
+                      px-4
+                      py-2
+                      rounded-xl
+                      border-[3px] border-secondary-gray
+                      outline-none
+                      focus:border-secondary-blue
+                      text-bases
+                      placeholder-primary-black placeholder-opacity-50
+                      font-light font-Inter
+                      w-full
+                    "
+                    placeholder="Enter Name"
+                  />
                 </div>
 
-                <div class="m-auto w-full space-y-2">
+                <div class="m-auto w-full space-y-2 col-span-2">
                   <label
                     for="email"
                     class="
@@ -165,9 +198,71 @@
                     ></textarea>
                   </div>
                 </div>
+                <div class="m-auto w-full space-y-2">
+                  <label
+                    for="email"
+                    class="
+                      block
+                      text-xl
+                      font-bold
+                      text-primary-black
+                      font-Inter
+                    "
+                    >Impressions</label
+                  >
+                  <div class="mt-1 w-full"></div>
+                  <input
+                    type="text"
+                    class="
+                      bg-white
+                      px-4
+                      py-2
+                      rounded-xl
+                      border-[3px] border-secondary-gray
+                      outline-none
+                      focus:border-secondary-blue
+                      text-bases
+                      placeholder-primary-black placeholder-opacity-50
+                      font-Inter
+                      w-full
+                    "
+                    placeholder="Enter Impressions"
+                  />
+                </div>
+                <div class="m-auto w-full space-y-2">
+                  <label
+                    for="email"
+                    class="
+                      block
+                      text-xl
+                      font-bold
+                      text-primary-black
+                      font-Inter
+                    "
+                    >Additional Impression Costs</label
+                  >
+                  <div class="mt-1 w-full"></div>
+                  <input
+                    type="text"
+                    class="
+                      bg-white
+                      px-4
+                      py-2
+                      rounded-xl
+                      border-[3px] border-secondary-gray
+                      outline-none
+                      focus:border-secondary-blue
+                      text-bases
+                      placeholder-primary-black placeholder-opacity-50
+                      font-light font-Inter
+                      w-full
+                    "
+                    placeholder="Enter Costs"
+                  />
+                </div>
                 <div
                   class="w-full flex flex-col space-y-2"
-                  v-for="(item, index, key) in Roles"
+                  v-for="(item, index, key) in Features"
                   :key="key"
                 >
                   <button
@@ -267,6 +362,7 @@ import { ref } from "@vue/reactivity";
 
 import IconArrowLeft from "../../../Icons/IconArrowLeft.vue";
 import IconArrow from "../../../Icons/IconArrow.vue";
+import IconSub from "../../../Icons/IconSub.vue";
 import { useStore } from "../../../stores/NewProjectStore.js";
 
 export default {
@@ -274,9 +370,9 @@ export default {
     /// let  store = useStore(),
     const store = useStore();
     const open = ref(false);
-    const Roles = ref([
+    const Features = ref([
       {
-        name: "Billing",
+        name: "Features",
         open: false,
         roles: [
           {
@@ -290,72 +386,6 @@ export default {
           {
             name: "Manage Companies",
             checked: false,
-          },
-          {
-            name: "Manage Licenses",
-            checked: false,
-          },
-        ],
-      },
-      {
-        name: "Admin",
-        open: false,
-        roles: [
-          {
-            name: "Manage User",
-            checked: true,
-          },
-          {
-            name: "Manage Roles",
-            checked: true,
-          },
-          {
-            name: "Manage Companies",
-            checked: true,
-          },
-          {
-            name: "Manage Licenses",
-            checked: false,
-          },
-        ],
-      },
-      {
-        name: "Content",
-        open: false,
-        roles: [
-          {
-            name: "Manage User",
-            checked: true,
-          },
-          {
-            name: "Manage Roles",
-            checked: false,
-          },
-          {
-            name: "Manage Companies",
-            checked: false,
-          },
-          {
-            name: "Manage Licenses",
-            checked: true,
-          },
-        ],
-      },
-      {
-        name: "Editor",
-        open: false,
-        roles: [
-          {
-            name: "Manage User",
-            checked: true,
-          },
-          {
-            name: "Manage Roles",
-            checked: false,
-          },
-          {
-            name: "Manage Companies",
-            checked: true,
           },
           {
             name: "Manage Licenses",
@@ -387,13 +417,14 @@ export default {
       OpenModal,
       open,
       store,
-      Roles,
+      Features,
       openClose,
     };
   },
   components: {
     IconArrowLeft,
     IconArrow,
+    IconSub,
   },
 };
 </script>
