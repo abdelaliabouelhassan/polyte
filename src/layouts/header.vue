@@ -42,7 +42,7 @@
         <span class="font-Inter">{{ item.name }}</span>
       </div>
     </div>
-    <div class="flex items-center space-x-3">
+    <div class="flex items-center space-x-3 cursor-pointer" @click="router.push({name:'profile'})">
       <div class="flex flex-col items-end">
         <span class="text-primary-black text-opacity-100 text-base font-normal"
           >Marius Wildeke</span
@@ -140,6 +140,7 @@ export default {
 
     return {
       links,
+      router,
       SetActive,
       GoTo,
       SetLinkActive,

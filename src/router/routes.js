@@ -22,6 +22,8 @@ import SettingsManageRoles from '../views/Settings/ManageRoles.vue'
 import SettingsManageLicences from '../views/Settings/ManageLicences.vue'
 import SettingsManageCompanies from '../views/Settings/ManageCompanies.vue'
 import SettingsBilling from '../views/Settings/Billing.vue'
+//user profile
+import UserProfile from '../views/Profile/index.vue'
 const routes = [
     { path: '/', component: Overview, name: 'home' },
     { path: '/overview', component: Overview, name: 'overview' },
@@ -52,6 +54,7 @@ const routes = [
             { path: 'billing', component: SettingsBilling, name: 'app-settings-billing' },
         ]
     },
+    { path: '/profile', component: UserProfile, name: 'profile' },
 
    
 ];
