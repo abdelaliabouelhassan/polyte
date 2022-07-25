@@ -61,6 +61,7 @@
         "
       >
         <button
+         @click="EditUser"
           class="
             text-xl
             font-normal font-Inter
@@ -94,26 +95,36 @@
         </button>
       </div>
     </div>
+    <EditUserModal ref="openModal" />
   </div>
 </template>
 
 <script>
+import { ref } from '@vue/reactivity';
 import { useRouter, useRoute } from "vue-router";
-
+import EditUserModal from "../modals/Profile/EditUserModal.vue";
 export default {
   setup() {
     const router = useRouter();
     const route = useRoute();
+    const openModal = ref(false)
     const AllFunctions = () => {
       router.push({
         name: "manage-contents-variant-options",
         params: { id: route.params.id },
       });
     };
-
+    const EditUser = () => {
+      openModal.value.OpenModal();
+    };
     return {
       AllFunctions,
+      openModal,
+      EditUser
     };
+  },
+  components: {
+    EditUserModal,
   },
 };
 </script>
