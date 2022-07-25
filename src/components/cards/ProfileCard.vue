@@ -32,6 +32,7 @@
 
         <div class="w-full flex justify-end">
           <button
+           @click="invite"
             class="
               text-xl
               font-bold font-Inter
@@ -96,6 +97,7 @@
       </div>
     </div>
     <EditUserModal ref="openModal" />
+    <InviteFriendModal ref="inviteModal" />
   </div>
 </template>
 
@@ -103,11 +105,13 @@
 import { ref } from '@vue/reactivity';
 import { useRouter, useRoute } from "vue-router";
 import EditUserModal from "../modals/Profile/EditUserModal.vue";
+import InviteFriendModal from "../modals/Profile/InviteFriendModal.vue";
 export default {
   setup() {
     const router = useRouter();
     const route = useRoute();
     const openModal = ref(false)
+    const inviteModal = ref(false)
     const AllFunctions = () => {
       router.push({
         name: "manage-contents-variant-options",
@@ -117,14 +121,20 @@ export default {
     const EditUser = () => {
       openModal.value.OpenModal();
     };
+    const invite = () => {
+      inviteModal.value.openModal();
+    }
     return {
       AllFunctions,
       openModal,
-      EditUser
+      EditUser,
+      inviteModal,
+      invite
     };
   },
   components: {
     EditUserModal,
+    InviteFriendModal
   },
 };
 </script>
