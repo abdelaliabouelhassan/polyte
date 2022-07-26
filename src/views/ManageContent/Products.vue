@@ -239,7 +239,7 @@
                             text-primary-black text-opacity-80 text-right
                           "
                         >
-                          <div class="flex float-right space-x-4">
+                          <div class="flex float-right space-x-4 -space-y-2">
                             <span
                               :class="{
                                 'font-bold text-primary-red': !product.status,

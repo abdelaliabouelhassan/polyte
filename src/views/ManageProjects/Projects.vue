@@ -169,10 +169,10 @@
                 :style="{ border: '6px solid ' + project.color + '36' }"
               >
                 <div
-                  class="w-full h-full flex relative"
+                  class="w-full h-full flex relative" @click.self="openProject"
                   :style="{ background: project.color }"
                 >
-                  <div class="m-auto" @click="openProject">
+                  <div class="m-auto"  @click="openProject" >
                     <IconProject />
                   </div>
 

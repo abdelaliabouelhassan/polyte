@@ -3,7 +3,7 @@
     <template v-slot:content>
       <div class="pt-16 pb-10 font-Inter">
         <div
-          class="flex flex-col items-start space-y-14 max-w-4xl m-auto w-full"
+          class="flex flex-col items-start space-y-14 max-w-5xl m-auto w-full"
         >
           <ProfileCard /> 
           <TrophiesCard />

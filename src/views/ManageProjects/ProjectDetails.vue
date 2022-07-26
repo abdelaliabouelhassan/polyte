@@ -225,7 +225,7 @@
                   />
                 </svg>
 
-                <span> New Project wizard</span>
+                <span>Open in Polyte Editor</span>
               </div>
             </button>
           </div>

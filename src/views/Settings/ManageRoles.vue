@@ -9,7 +9,7 @@
           <span class="text-3xl font-bold text-primary-black">Roles</span>
           <div class="flex items-center space-x-4 max-w-xl w-full">
             <div class="max-w-[540px] w-full h-[46px] relative">
-              <div class="absolute left-4 top-4">
+              <div class="absolute left-6 top-6">
                 <IconSearch />
               </div>
               <input
@@ -20,7 +20,7 @@
                   rounded-lg
                   bg-white
                   outline-none
-                  pl-10
+                  pl-14
                   px-4
                   placeholder-opacity-25 placeholder-primary-black
                   text-xl
@@ -192,6 +192,7 @@
                       :key="key"
                     >
                       <td
+                      @click="openCreateModal"
                         class="
                           whitespace-nowrap
                           py-4
@@ -248,6 +249,7 @@
                         </div>
                       </td>
                       <td
+                       @click="openCreateModal"
                         class="
                           whitespace-nowrap
                           py-4
@@ -260,6 +262,7 @@
                         {{ role.description }}
                       </td>
                       <td
+                       @click="openCreateModal"
                         class="
                           whitespace-nowrap
                           py-4

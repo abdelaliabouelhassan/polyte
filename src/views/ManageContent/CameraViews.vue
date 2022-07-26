@@ -4,7 +4,7 @@
       <SideBar />
     </template>
     <template v-slot:content>
-      <div class="py-10 max-w-7xl m-auto px-4 pl-8 space-y-24">
+      <div class="py-10 max-w-[1280px] m-auto px-4 pl-8 space-y-24">
         <div class="w-full grid grid-cols-3 gap-10 pt-20">
           <div class="w-full col-span-1">
             <ViewsCard />
