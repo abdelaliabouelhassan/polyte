@@ -44,7 +44,8 @@
             max-w-[1201px]
           "
         >
-          <div class="w-full flex">
+          <!-- Choose subscription plan -->
+          <div class="w-full flex" v-if="!Pay">
             <div class="w-[496px] bg-[#F4F6F8] col-span-2 p-6 space-y-10">
               <div>
                 <span
@@ -353,7 +354,7 @@
                 <div class="flex flex-col items-start">
                   <span class="font-bold text-3xl text-primary-black font-Inter"
                     >{{
-                        !isMonthly
+                      !isMonthly
                         ? selectedSub.package.Monthlyprice
                         : selectedSub.package.Yearlyprice
                     }}€ / month</span
@@ -429,6 +430,118 @@
               </div>
             </div>
           </div>
+          <!-- Pay  -->
+          <div class="w-full flex" v-else>
+            <div class="w-[496px] bg-[#F4F6F8] col-span-2 p-6 space-y-10">
+              <div class="p-5">
+                <button class="bg-[#0013240F] w-11 h-11 rounded-lg flex hover:bg-opacity-60" @click="Pay = false">
+                  <IconArrowLeft class="m-auto" />
+                </button>
+              </div>
+
+              <div class="w-full flex flex-col items-start space-y-4 px-5 pb-5">
+                <div class="w-full flex items-center space-x-4">
+                  <div>
+                    <IconSub1
+                      :maincolor="selectedSub.color"
+                      :border="selectedSub.border_color"
+                    />
+                  </div>
+                  <div class=" flex items-start flex-col space-y-1">
+                    <span class=" text-primary-black text-opacity-50 font-bold font-Inter text-xl">{{selectedSub.title}}</span>
+                   <div class=" flex items-baseline space-x-8">
+                     <span class=" text-3xl font-bold text-primary-black font-Inter"> {{
+                      !isMonthly
+                        ? selectedSub.package.Monthlyprice
+                        : selectedSub.package.Yearlyprice
+                    }}€</span>
+                     <span class=" text-2xl text-primary-black text-opacity-60 font-normal">Pro Monat</span>
+                   </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" flex flex-col items-start w-full px-5">
+                <div class=" w-full flex items-center justify-between">
+                  <span class=" text-primary-black font-bold font-Inter text-2xl">Polyte Business</span>
+                  <span class=" text-primary-black font-bold font-Inter text-2xl">{{
+                      !isMonthly
+                        ? selectedSub.package.Monthlyprice
+                        : selectedSub.package.Yearlyprice
+                    }}€</span>
+                </div>
+                <div>
+                  <span class=" text-primary-black font-normal font-Inter text-xl text-opacity-60">monatlich abgerechnet</span>
+                </div>
+              </div>
+              <div class=" w-full flex flex-col items-start space-y-4 px-5 pb-20">
+                <div class=" w-full flex items-center justify-between border-b-4 border-white pb-4">
+                  <span class=" text-primary-black font-normal font-Inter text-2xl">Zwischensumme</span>
+                  <span class=" text-primary-black font-normal font-Inter text-2xl">{{
+                      !isMonthly
+                        ? selectedSub.package.Monthlyprice
+                        : selectedSub.package.Yearlyprice
+                    }}€</span>
+                </div>
+                 <div class=" w-full flex items-center justify-between border-b-4 border-white pb-4">
+                  <span class=" text-primary-black font-normal font-Inter text-2xl text-opacity-50">Steuer</span>
+                  <span class=" text-primary-black font-normal font-Inter text-2xl text-opacity-50">0,00€</span>
+                </div>
+                 <div class=" w-full flex items-center justify-between border-b-4 border-white pb-4">
+                  <span class=" text-primary-black font-normal font-Inter text-2xl">Heute fällige Gesamtsumme</span>
+                  <span class=" text-primary-black font-normal font-Inter text-2xl">{{
+                      !isMonthly
+                        ? selectedSub.package.Monthlyprice
+                        : selectedSub.package.Yearlyprice
+                    }}€</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-10 space-y-10 col-span-4 w-[705px] flex flex-col items-start h-full relative">
+              
+              <div class=" flex flex-col items-start space-y-4 w-full max-h-[500px] overflow-y-auto">
+                <div class=" w-full h-[500px] space-y-4">
+                  <span class=" text-4xl text-primary-black text-opacity-60 font-medium">Kontaktinformationen</span>
+                   <!-- Add here Stripe from -->
+                 
+                </div>
+              </div>
+             
+
+              <div class="w-full  flex justify-between items-cente absolute bottom-0 p-10  inset-x-0 right-0 z-50 bg-white ">
+                <button
+                  @click="Cancel"
+                  class="
+                    text-primary-black
+                    font-normal
+                    text-xl
+                    bg-tertiary-gray
+                    py-2
+                    px-4
+                    rounded-lg
+                    hover:bg-secondary-gray
+                  "
+                >
+                  Cancel
+                </button>
+                <button
+                  @click="Subscribe"
+                  class="
+                    font-bold
+                    text-xl
+                    bg-primary-blue
+                    text-white
+                    py-2
+                    px-4
+                    rounded-lg
+                    hover:bg-secondary-blue
+                  "
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -447,6 +560,7 @@ import IconCloud from "../../../Icons/IconCloud.vue";
 import IconImpression from "../../../Icons/IconImpression.vue";
 import IconUser from "../../../Icons/IconUser.vue";
 import IconSupport from "../../../Icons/IconSupport.vue";
+import IconArrowLeft from "../../../Icons/IconArrowLeft.vue";
 import { computed } from "@vue/runtime-core";
 
 export default {
@@ -455,6 +569,8 @@ export default {
     const store = useStore();
     const open = ref(false);
     const isMonthly = ref(false);
+    const Pay = ref(false);
+
     const Subsriptions = ref([
       {
         title: "Polyte Maker",
@@ -535,7 +651,6 @@ export default {
         },
       },
     ]);
-
     const selectSub = (sub) => {
       Subsriptions.value.forEach((s) => {
         s.selected = false;
@@ -555,10 +670,10 @@ export default {
     };
     const Continue = () => {
       //create code here
-
-      //close modal after create
-      open.value = false;
+      Pay.value = true;
     };
+
+    const Subscribe = () => {};
 
     return {
       Continue,
@@ -569,7 +684,9 @@ export default {
       Subsriptions,
       selectedSub,
       selectSub,
-      isMonthly
+      isMonthly,
+      Pay,
+      Subscribe,
     };
   },
   components: {
@@ -580,6 +697,7 @@ export default {
     IconImpression,
     IconUser,
     IconSupport,
+    IconArrowLeft,
   },
 };
 </script>

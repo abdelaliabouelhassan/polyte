@@ -37,7 +37,7 @@
           />
         </svg>
       </button>
-      <highlightjs language="js" :code="'<script>' + code + ' \n</script>'" />
+      <highlightjs language="js" :code="'<script>' + code + '\n</script>'" />
     </div>
   </div>
 </template>
