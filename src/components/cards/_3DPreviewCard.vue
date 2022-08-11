@@ -72,16 +72,16 @@
           class="
             font-light
             text-primary-black
-            placeholder-primary-black placeholder-opacity-25
+            placeholder-primary-black placeholder-opacity-25 text-xl
             font-Inter
-            py-2
+            py-5
             px-4
             pl-4
             w-full
             outline-none
           "
         />
-        <div class="absolute right-4 top-2.5">
+        <div class="absolute right-6 top-6">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"

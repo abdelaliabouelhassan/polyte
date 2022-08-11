@@ -50,7 +50,7 @@
           overflow-y-auto
         "
       >
-        <div class="flex items-center justify-between w-full">
+        <div  @click="AllProducts" class="flex items-center justify-between w-full hover:bg-secondary-gray bg-opacity-60 hover:py-2 hover:px-2 cursor-pointer rounded-xl">
           <div class="flex items-center space-x-4">
             <div
               class="w-14 h-9 rounded-md overflow-hidden bg-quaternary-gray"
@@ -75,7 +75,7 @@
             ></div>
           </div>
         </div>
-        <div class="flex items-center justify-between w-full">
+        <div  @click="AllProducts" class="flex items-center justify-between w-full hover:bg-secondary-gray bg-opacity-60 hover:py-2 hover:px-2 cursor-pointer rounded-xl">
           <div class="flex items-center space-x-4">
             <div
               class="w-14 h-9 rounded-md overflow-hidden bg-quaternary-gray"
@@ -100,7 +100,7 @@
             ></div>
           </div>
         </div>
-        <div class="flex items-center justify-between w-full">
+        <div  @click="AllProducts" class="flex items-center justify-between w-full hover:bg-secondary-gray bg-opacity-60 hover:py-2 hover:px-2 cursor-pointer rounded-xl">
           <div class="flex items-center space-x-4">
             <div
               class="w-14 h-9 rounded-md overflow-hidden bg-quaternary-gray"
@@ -126,7 +126,7 @@
           </div>
         </div>
         <!-- here we have bg-opacity-25 -->
-        <div class="flex items-center justify-between w-full">
+        <div  @click="AllProducts" class="flex items-center justify-between w-full hover:bg-secondary-gray bg-opacity-60 hover:py-2 hover:px-2 cursor-pointer rounded-xl">
           <div class="flex items-center space-x-4">
             <div
               class="

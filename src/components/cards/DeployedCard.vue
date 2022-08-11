@@ -34,7 +34,7 @@
         class="
           w-full
           p-4
-          border-0 border-b-4 border-tertiary-gray
+          border-0 border-b-4 border-tertiary-gray hover:bg-secondary-gray
           flex
           justify-between
           items-center
